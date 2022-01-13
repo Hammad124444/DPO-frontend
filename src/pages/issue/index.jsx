@@ -9,7 +9,7 @@ export default function MIssuesAll() {
     )
 }
 
-MIssues.getLayout = function getLayout(page) {
+MIssuesAll.getLayout = function getLayout(page) {
     return (
         <MLayoutIssues>{ page }</MLayoutIssues>
     )
