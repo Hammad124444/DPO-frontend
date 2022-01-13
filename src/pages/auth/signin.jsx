@@ -41,7 +41,7 @@ export default function MSignIn() {
                 </a>
             </Form.Item>
             <Form.Item>
-                <Button type="primary" htmlType="submit" className="login-form-button">
+                <Button type="success" htmlType="submit" className="login-form-button">
                 Sign in
                 </Button>
                 Or <Link href="/auth/register"><a>Register now!</a></Link>
