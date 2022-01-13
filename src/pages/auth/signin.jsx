@@ -1,7 +1,7 @@
 import MAuthLayout from "../../layout/layout-auth"
 import { Form, Input, Button, Checkbox } from 'antd';
 import { LockOutlined, MailOutlined } from "@ant-design/icons";
-import Link from 'next';
+import Link from 'next/link'
 
 export default function MSignIn() {
     const onFinish = (values) => {
@@ -39,8 +39,7 @@ export default function MSignIn() {
                 <a className="login-form-forgot" href="">
                 Forgot password
                 </a>
-             </Form.Item>
-
+            </Form.Item>
             <Form.Item>
                 <Button type="primary" htmlType="submit" className="login-form-button">
                 Sign in

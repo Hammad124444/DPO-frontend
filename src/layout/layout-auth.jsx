@@ -4,7 +4,7 @@ const { Header, Content, Footer } = Layout;
 
 export default function MAuthLayout({ children }) {
     return(
-        <Layout>
+        <Layout style={{ minHeight: '100vh' }}>
             <Header>
                 <div className="logo" />
             </Header>
