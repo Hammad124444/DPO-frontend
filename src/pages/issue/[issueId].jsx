@@ -1,6 +1,6 @@
 
-export default function MIssuesById({params}) {
+export default function MIssuesById() {
     return(
-        <h1>Show issue cards by Id: {params.id}</h1>
+        <h1>Show issue cards by Id: </h1>
     )
 }

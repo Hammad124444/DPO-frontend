@@ -10,6 +10,9 @@ export default function MLayOutRoot({children}) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>{children}</main>
+            <footer>
+                DPO Footer
+            </footer>
         </div>
     )
 }
