@@ -48,7 +48,7 @@ export default function MRegisterUser() {
                 <Button type="danger" htmlType="submit" className="login-form-button">
                 Register
                 </Button>
-                Already have account ? <Link href="/auth/sigin"><a>Sign In</a></Link>
+                Already have account ? <Link href="/auth/signin"><a>Sign In</a></Link>
             </Form.Item>
         </Form>
     )

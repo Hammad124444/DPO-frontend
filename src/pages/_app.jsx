@@ -1,4 +1,5 @@
-import '../../styles/globals.css'
+import '../../styles/globals.css';
+import '../../styles/layout.css';
 import 'antd/dist/antd.min.css';
 import MLayOutRoot from '../layout/layout-root';
 

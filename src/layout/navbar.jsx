@@ -6,7 +6,7 @@ export default function MNavbar () {
     return (
         <Header className='header'>
             <div className="logo" />
-            <Menu mode="horizontal" theme="dark">
+            <Menu mode="horizontal" theme="light">
                 {
                     menus.map((el) => (
                         <Menu.Item key={ el.key }>{ el.name }</Menu.Item>

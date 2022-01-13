@@ -8,8 +8,8 @@ export default function MAuthLayout({ children }) {
             <Header>
                 <div className="logo" />
             </Header>
-            <Content>
-                { children }
+            <Content className='container-sm align-items-center justify-content-center pt-5'>
+                    { children }
             </Content>
             <Footer>
                 <h1>Footer of DPO Authentication</h1>
