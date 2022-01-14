@@ -1,6 +1,11 @@
+// Original Ant Style import
+import 'antd/dist/antd.min.css';
+// Custom Style Import
 import '../../styles/globals.css';
 import '../../styles/layout.css';
-import 'antd/dist/antd.min.css';
+import '../../styles/spacing.scss';
+import '../../styles/font.scss';
+// Root layout on the app
 import MLayOutRoot from '../layout/layout-root';
 
 
