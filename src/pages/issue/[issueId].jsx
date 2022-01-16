@@ -7,6 +7,6 @@ export default function MIssuesById() {
 
     const exampleData = detaildIssueInfo[0];
     return(
-       
+       <h1>Example Issue Data Here</h1>
     )
 }

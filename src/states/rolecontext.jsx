@@ -6,3 +6,7 @@ export const roles = {
         write: false
     }
 }
+
+export const RoleContext = React.createContext(
+    roles.admin
+);

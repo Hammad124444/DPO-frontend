@@ -1,6 +1,6 @@
-import React, { useState, useContext } from 'react';
 import { Layout } from "antd";
 import MSider from "../landing/sidebar";
+import { RoleContext } from '../states/rolecontext';
 
 const { Header, Content } = Layout;
 
@@ -12,7 +12,9 @@ export default function MLayoutIssues({ children }) {
             <Layout>
                 <MSider />
                 <Content>
-                    { children }
+                    <RoleContext.Provider>
+                        { children }
+                    </RoleContext.Provider>
                 </Content>
             </Layout>
         </Layout>
