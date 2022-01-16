@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Layout, Menu } from 'antd';
 import { siderItems }  from '../core/data/siderItems';
+import { UserSwitchOutlined, UsergroupAddOutlined, UsergroupDeleteOutlined } from '@ant-design/icons';
 const { Sider } = Layout;
 
 export default function MSider() {
@@ -9,11 +10,13 @@ export default function MSider() {
         setState(collapsed);
       };
     return(
+
         <Sider width={200} collapsible collapsed={state} onCollapse={ onCollapse }>
-            <Menu mode='inline'>
+            <Menu mode='inline'
+                style={{ height: '100%', borderRight: 0 }}>
                 {
-                    siderItems.forEach((el) => (
-                        <Menu.Item key={el.key} >{el.name}  {el.count}</Menu.Item>
+                    siderItems.map((el) => (
+                        <Menu.Item key={el.key}>{el.count}     {el.name}</Menu.Item>
                     ))
                 }
             </Menu>

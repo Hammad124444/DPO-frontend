@@ -2,6 +2,7 @@
 import 'antd/dist/antd.min.css';
 // Custom Style Import
 import '../../styles/globals.css';
+import '../../styles/custom.css';
 import '../../styles/layout.css';
 import '../../styles/spacing.scss';
 import '../../styles/font.scss';

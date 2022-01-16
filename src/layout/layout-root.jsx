@@ -12,7 +12,7 @@ export default function MLayOutRoot({children}) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>
-                <UserAuthContext.Provider>
+                <UserAuthContext.Provider value={UserAuthContext}>
                     {children}
                 </UserAuthContext.Provider>
             </main>

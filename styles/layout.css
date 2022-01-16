@@ -50,7 +50,15 @@
   justify-content: center !important;
 }
 
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
 .align-items-center {
   align-items: center;
+}
+
+.text-center {
+  text-align: center !important;
 }
 
