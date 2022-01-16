@@ -1,8 +1,10 @@
 import { Layout, Menu } from 'antd';
 import { menus }  from '../core/data/menu';
 import Link from 'next/link';
+import { UserOutlined, LoginOutlined, UsergroupAddOutlined } from '@ant-design/icons/lib/icons';
 
 const { Header } = Layout;
+const { SubMenu } = Menu;
 
 export default function MNavbar () {
     return (
@@ -22,6 +24,22 @@ export default function MNavbar () {
                                 <Menu.Item key={ el.key }>{ el.name }</Menu.Item>
                             ))
                         }
+                        <SubMenu key="SubMenu" icon={<UserOutlined />}>
+                            <Menu.Item key="setting:1" icon={<LoginOutlined />}>
+                                <Link href={"/auth/signin"}>
+                                    <a>
+                                        Sign In
+                                    </a>
+                                </Link>
+                            </Menu.Item>
+                            <Menu.Item key="setting:2" icon={<UsergroupAddOutlined />}>
+                                <Link href={"/auth/register"}>
+                                    <a>
+                                        Sign In
+                                    </a>
+                                </Link>
+                            </Menu.Item>
+                        </SubMenu>
                     </Menu>
                 </div>
             </div>
