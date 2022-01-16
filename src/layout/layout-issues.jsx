@@ -1,10 +1,12 @@
+import { useContext } from "react";
 import { Layout } from "antd";
 import MSider from "../landing/sidebar";
-import { RoleContext } from '../states/rolecontext';
+import { UserAuthContext } from "../states/userAuth";
 
 const { Header, Content } = Layout;
 
 export default function MLayoutIssues({ children }) {
+
     return(
         <Layout>
             <Header>
@@ -12,9 +14,7 @@ export default function MLayoutIssues({ children }) {
             <Layout>
                 <MSider />
                 <Content>
-                    <RoleContext.Provider>
                         { children }
-                    </RoleContext.Provider>
                 </Content>
             </Layout>
         </Layout>
