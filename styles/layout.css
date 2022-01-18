@@ -58,6 +58,10 @@
   align-items: center;
 }
 
+.f-right {
+  float: right !important;
+}
+
 .text-center {
   text-align: center !important;
 }

@@ -33,7 +33,7 @@ export default function MCreateIssue() {
             <MCheckBoxGroup label="Stable Coins" options={stableCoins}/>
             <MEditInput label="Fund wallet" />
             <MEditInput label="Treasury wallet" />
-            <MPrimaryBtn label="Create Issue"/>
+            <MPrimaryBtn label="Create Issue" size="large" type="primary"/>
         </Form>
     )
 }

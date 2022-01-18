@@ -1,7 +1,7 @@
 import { Button } from 'antd';
 
-export default function MRoundBtn() {
+export default function MRoundBtn({ size, type, label }) {
     return(
-        <Button></Button>
+        <Button shape="round" size={size} type={type}>{ label }</Button>
     );
 }

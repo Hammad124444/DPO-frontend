@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Layout, Menu } from 'antd';
-// import { siderItems }  from '../core/data/siderItems';
 import { CheckCircleOutlined, InfoCircleOutlined, QuestionCircleOutlined } from '@ant-design/icons';
+import Link from 'next/link';
+
 const { Sider } = Layout;
 
 export default function MSider() {
@@ -14,14 +15,17 @@ export default function MSider() {
         <Sider width={200} collapsible collapsed={state} onCollapse={ onCollapse }>
             <Menu mode='inline'
                 style={{ height: '100%', borderRight: 0 }}>
-                {/* {
-                    siderItems.map((el) => (
-                        <Menu.Item key={el.key}>{el.count} {el.name}</Menu.Item>
-                    ))
-                } */}
-                <Menu.Item key="active" icon={<CheckCircleOutlined />}>Active Issues</Menu.Item>
-                <Menu.Item key="ongoing" icon={<InfoCircleOutlined />}>Issuable Issues</Menu.Item>
-                <Menu.Item key="upcoming" icon={<QuestionCircleOutlined />}>Upcoming Issues</Menu.Item>
+                <Menu.Item key="active" icon={<CheckCircleOutlined />}>
+                    <Link href={"/issue"}>
+                        Active Issues
+                    </Link>
+                </Menu.Item>
+                <Menu.Item key="ongoing" icon={<InfoCircleOutlined />}>
+                    Issuable Issues
+                </Menu.Item>
+                <Menu.Item key="upcoming" icon={<QuestionCircleOutlined />}>
+                    Upcoming Issues
+                </Menu.Item>
             </Menu>
         </Sider>
     );
