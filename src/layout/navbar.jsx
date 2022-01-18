@@ -18,7 +18,7 @@ export default function MNavbar () {
                     </Link>
                 </div>
                 <div className="ant-col menu-row ant-col-sm-0 ant-col-md-18 ant-col-xl-19 ant-col-xxl-20">
-                    <Menu mode="horizontal" theme="light">
+                    <Menu mode="horizontal" theme="light" className='f-right'>
                         {
                             menus.map((el) => (
                                 <Menu.Item key={ el.key }>{ el.name }</Menu.Item>
