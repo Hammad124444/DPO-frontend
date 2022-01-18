@@ -1,7 +1,7 @@
 import { Button } from 'antd';
 
-export default function MSecondaryBtn({ label }) {
+export default function MSecondaryBtn({ size, type, label }) {
     return(
-        <Button size='large'>{ label }</Button>
+        <Button size={size} type={type} danger>{ label }</Button>
     );
 }
