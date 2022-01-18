@@ -8,7 +8,7 @@ export default function MLandingWhyChoose({detail}) {
                 {
                     detail.paragraphs.map((el) => (
                         <div key={el.id}>
-                            <p className="font-20 c-green">{el.title}</p>
+                            <p className="font-20 c-green font-bold">{el.title}</p>
                             <p className="font-16">{el.description}</p>
                         </div>
                     ))

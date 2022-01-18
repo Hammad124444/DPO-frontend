@@ -1,5 +1,7 @@
 export default function MLandingCallUs() {
     return(
-        <h1>Call Us Component</h1>
+        <div className="container pv-30 m-auto">
+
+        </div>
     )
 }
