@@ -6,6 +6,7 @@ import '../../styles/custom.css';
 import '../../styles/layout.css';
 import '../../styles/spacing.scss';
 import '../../styles/font.scss';
+import '../../styles/colors.scss';
 // Root layout on the app
 import MLayOutRoot from '../layout/layout-root';
 

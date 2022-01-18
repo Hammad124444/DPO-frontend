@@ -1,10 +1,15 @@
-$font-sizes: 10px, 14px, 16px, 18px, 20px, 24px, 28px, 32px;
+$font-sizes: 10, 14, 16, 18, 20, 24, 28, 32;
 
 @each $font-size in $font-sizes {
     .font-#{$font-size} {
-        font-size: $font-size !important;
+        font-size: #{$font-size}px !important;
     }
 }
+
+.font-bold {
+    font-weight: bold;
+}
+
 
 
 
