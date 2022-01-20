@@ -3,7 +3,6 @@ import MCard from '../../core/ui-kit/card/card';
 import { tempIssues } from '../../core/data/issues_temp';
 
 export default function MIssuesAll() {
-
     return(
         <MCard cards={ tempIssues } issue/>
     )
