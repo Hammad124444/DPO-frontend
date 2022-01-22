@@ -2,6 +2,7 @@ import MCarousel from "../core/ui-kit/carousel/carousel";
 import MLandingOptions from "./options";
 import MLandingWhyChoose from "./whychoose";
 import MLandingCallUs from "./callus";
+
 import {carousels} from "../core/data/carousels";
 import {LandingCards} from "../core/data/landingcards";
 import {WhyChooseUs} from "../core/data/landing/chooseus";
