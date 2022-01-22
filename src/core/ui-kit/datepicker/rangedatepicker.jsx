@@ -1,5 +1,6 @@
 import { DatePicker } from "antd";
 const { RangePicker } = DatePicker;
+import moment from 'moment';
 
 export default function MRangeDatePicker({ label, type }) {
     if (type == 'new') {

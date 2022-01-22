@@ -1,12 +1,24 @@
-import React, { useState, useContext } from 'react';
-import { detaildIssueInfo } from '../../core/data/issues_detailed';
+import React, {useState, useEffect} from 'react';
+import MEditableIssue from "../../issues/editableIssue";
+import MReadableIssue from "../../issues/readableIssue";
 
 export default function MIssuesById() {
-
+    const [role, setRole] = useState('admin');
     // Role Management whether Admin or Investor
+    useEffect(() => {
+        const tempRole = localStorage.getItem('role');
+        if (tempRole) {
+            setRole(tempRole);
+        }
+    }, [])
 
-    const exampleData = detaildIssueInfo[0];
-    return(
-       <h1>Example Issue Data Here</h1>
-    )
+    if (role == 'admin') {
+        return(
+            <MEditableIssue/>
+        )
+    } else {
+        return(
+            <MReadableIssue/>
+        )
+    }
 }
