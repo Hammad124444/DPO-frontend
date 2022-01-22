@@ -8,7 +8,7 @@ const { Header, Content } = Layout;
 export default function MLayoutIssues({ children }) {
 
     return(
-        <Layout>
+        <Layout style={{ minHeight: '100vh' }}>
             <Header>
             </Header>
             <Layout>

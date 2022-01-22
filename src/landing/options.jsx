@@ -1,9 +1,4 @@
-import { Card } from 'antd';
-
-import { BulbOutlined } from "@ant-design/icons";
-import MPrimaryBtn from "../core/ui-kit/buttons/primaryBtn";
-
-const { Meta } = Card;
+import MLandingOptionCard from "../core/ui-kit/card/landing_card";
 
 export default function MLandingOptions({cards}) {
     return(
@@ -11,19 +6,7 @@ export default function MLandingOptions({cards}) {
             {
                 cards.map((el) => (
                     <div key={el.id} className="ant-col-8 ant-col-sm-8 ant-col-xs-24">
-                        <Card
-                            className="pt-30"
-                            cover={<BulbOutlined style={{ fontSize: '50px'}} />}
-                            actions={[
-                                <MPrimaryBtn key={el.id} type="default" label={el.button} size="default"/>
-                            ]}
-                        >
-                            <Meta
-                                className="text-center"
-                                title={el.title}
-                                description={el.description}
-                            />
-                        </Card>
+                        <MLandingOptionCard info={el}/>
                     </div>
                 ))
             }

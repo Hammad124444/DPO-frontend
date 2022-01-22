@@ -1,11 +1,9 @@
 import MLayoutIssues from "../../layout/layout-issues";
-import MCard from '../../core/ui-kit/card/card';
-import { tempIssues } from '../../core/data/issues_temp';
+import MIssueOverView from "../../issues/overview";
 
 export default function MIssuesAll() {
-
     return(
-        <MCard cards={ tempIssues } issue/>
+        <MIssueOverView />
     )
 }
 

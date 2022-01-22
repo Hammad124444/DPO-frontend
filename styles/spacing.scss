@@ -24,10 +24,10 @@
         padding-left: #{$i}px !important;
     }
     .pv-#{$i} {
-        padding: #{$i}px auto !important;
+        padding: #{$i}px 0 !important;
     }
     .ph-#{$i} {
-        padding: auto #{$i}px !important;
+        padding: 0 #{$i}px !important;
     }
 }
 .m-auto {
