@@ -1,13 +1,11 @@
-import { Form, Checkbox } from 'antd';
+import { Checkbox } from 'antd';
 
-export default function MCheckBoxGroup({label, options}) {
+export default function MCheckBoxGroup({options}) {
     const onChange = (checkedValues) => {
         console.log('checked = ', checkedValues);
     }
     return(
-        <Form.Item label={label}>
             <Checkbox.Group options={options} 
              onChange={onChange} />
-        </Form.Item>
     )
 }
