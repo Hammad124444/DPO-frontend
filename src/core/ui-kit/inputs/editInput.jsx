@@ -1,8 +1,7 @@
-import { Form, Input } from 'antd';
+import { Input } from 'antd';
 
-export default function MEditInput({label, prefix, placeholder}) {
+export default function MEditInput({prefix, placeholder}) {
     return(
-        <Form.Item label={label}>
             <Input
             style={{ width: '100%' }}
             placeholder={placeholder}
@@ -10,6 +9,5 @@ export default function MEditInput({label, prefix, placeholder}) {
             prefix={prefix}
             size='large'
             />
-        </Form.Item>
     )
 }

@@ -1,9 +1,7 @@
-import { Form, Mentions } from 'antd';
+import { Mentions } from 'antd';
  
-export default function MTextArea({label, placeholder}) {
+export default function MTextArea({placeholder}) {
     return(
-        <Form.Item label={label}>
             <Mentions autoSize row={4} placeholder={placeholder}></Mentions>
-        </Form.Item>
     )
 }
