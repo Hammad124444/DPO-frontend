@@ -1,4 +1,4 @@
-import {tempIssues} from "../core/data/issues_temp";
+import { tempIssues } from "../core/data/issues_temp";
 import MIssueCard from "../core/ui-kit/card/issuecard";
 
 export default function MIssueOverView() {
@@ -14,4 +14,5 @@ export default function MIssueOverView() {
         </div>
     )
 }
+
 
