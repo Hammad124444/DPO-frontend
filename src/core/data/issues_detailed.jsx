@@ -1,4 +1,4 @@
-export const detaildIssueInfo = [
+export const detailedIssueInfo = [
     {
         id: 1,
         background: 'https://d14zl4he2x0kj1.cloudfront.net/properties_images/property_types/multi_family.jpg',
@@ -7,6 +7,7 @@ export const detaildIssueInfo = [
         status: 1,
         series: 49,
         open: true,
+        paused: true,
         issuable: true,
         capreached: true,
         tminted: 5000,
@@ -22,7 +23,9 @@ export const detaildIssueInfo = [
         },
         investors: 4,
         balanceLocked: 15000,
-        balanceUnlocked: 41000
+        balanceUnlocked: 41000,
+        start_date: '01/01/2022',
+        end_date: '03/25/2022'
     },
     {
         id: 2,
@@ -32,6 +35,7 @@ export const detaildIssueInfo = [
         status: 1,
         series: 49,
         open: true,
+        paused: false,
         issuable: true,
         capreached: true,
         tminted: 5000,
@@ -57,6 +61,7 @@ export const detaildIssueInfo = [
         status: 1,
         series: 49,
         open: true,
+        paused: false,
         issuable: true,
         capreached: true,
         tminted: 5000,

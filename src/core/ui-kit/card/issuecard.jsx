@@ -4,9 +4,8 @@ import MButtonWithIcon from "../buttons/iconButton";
 
 export default function MIssueCard({info}) {
     const router = useRouter();
-
     const navigateToDetailedIssue = (id) => {
-        router.push('/issue/' + id);
+        router.push(`/issue/${id}`);
     }
 
     return(
@@ -16,7 +15,7 @@ export default function MIssueCard({info}) {
             cover={<img alt={info.title} src={info.background} />}
             actions={[
                 <MButtonWithIcon
-                    type="default"
+                    type="primary"
                     size="large"
                     label="Edit"
                     editable

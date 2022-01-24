@@ -1,13 +1,13 @@
 import { Switch } from 'antd';
 
-export default function MSwitch({ on, off, type }) {
+export default function MSwitch({ on, off, type, checked }) {
     if (type == 'edit') {
     // Switch on editable Issue Page - admin/issuers
         return(
             <Switch
                 checkedChildren={on}
                 unCheckedChildren={off}
-                defaultChecked
+                checked={checked}
             />
         )
     } else {
@@ -16,7 +16,7 @@ export default function MSwitch({ on, off, type }) {
             <Switch
                 checkedChildren={on}
                 unCheckedChildren={off}
-                defaultChecked
+                checked={checked}
                 disabled
             />
         )
