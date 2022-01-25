@@ -6,6 +6,7 @@ import MSwitch from "../core/ui-kit/Switch/switch";
 export default function MIssueDetailById({issueId}) {
     const issueDetail = detailedIssueInfo[issueId];
     return(
+        // TODO Container Style for layout design
         <>
         <img src={issueDetail.background} alt={issueDetail.title}/>
         <Descriptions title={issueDetail.title}>
@@ -28,6 +29,10 @@ export default function MIssueDetailById({issueId}) {
             <Descriptions.Item label="Tokens Sold">
                 { issueDetail.tsold }
             </Descriptions.Item>
+            <Descriptions.Item label="Fund Raised">
+
+            </Descriptions.Item>
+        {/*    TODO More details*/}
         </Descriptions>
         </>
     )
