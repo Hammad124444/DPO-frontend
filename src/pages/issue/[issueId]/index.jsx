@@ -6,7 +6,7 @@ export default function MIssueById(props) {
     )
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
     const { params } = context;
     const issueId = params.issueId;
     return {
@@ -16,13 +16,13 @@ export async function getStaticProps(context) {
     }
 }
 
-export async function getStaticPaths() {
-    return{
-        paths: [
-            { params: { id: '1' } },
-            { params: { id: '2' } },
-            { params: { id: '3' } }
-        ],
-        fallback: false
-    }
-}
+// export async function getStaticPaths() {
+//     return{
+//         paths: [
+//             { params: { id: '1' } },
+//             { params: { id: '2' } },
+//             { params: { id: '3' } }
+//         ],
+//         fallback: false
+//     }
+// }
