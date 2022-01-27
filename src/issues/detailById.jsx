@@ -3,14 +3,18 @@ import { detailedIssueInfo } from "../core/data/issues_detailed";
 import MRangeDatePicker from "../core/ui-kit/datepicker/rangedatepicker";
 import MTag from "../core/ui-kit/tags/tag";
 import Image from 'next/image';
+import MPrimaryBtn from "../core/ui-kit/buttons/primaryBtn";
+
+
 export default function MIssueDetailById({issueId}) {
     const issueDetail = detailedIssueInfo[issueId];
-
 
     return(
         <div className="container pt-30 ant-row">
             <div className="ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-8 ant-col-xl-8">
                 <Image src={issueDetail.background} alt={issueDetail.title} width={500} height={300}/>
+                <MPrimaryBtn type="danger" label="Edit" size="large" />
+                <MPrimaryBtn type="primary" label="Investors" size="large" />
             </div>
             <div className="ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-16 ant-col-xl-16 ph-30">
                 <Descriptions title={issueDetail.title} className="d-flex flex-column" bordered
