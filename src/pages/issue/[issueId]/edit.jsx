@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import MEditIssueDetailById from "../../../issues/editableIssue";
+import MLayoutWithHeaderAndFooter from "../../../layout/layout-headerAndFooter";
 
 export default function MIssueEditById() {
     const router = useRouter();
@@ -7,5 +8,13 @@ export default function MIssueEditById() {
 
     return(
         <MEditIssueDetailById />
+    )
+}
+
+MIssueEditById.getLayout = function getLayout(page) {
+    return (
+        <MLayoutWithHeaderAndFooter>
+            { page }
+        </MLayoutWithHeaderAndFooter>
     )
 }
