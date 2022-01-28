@@ -10,7 +10,7 @@ export default function MLayoutLanding({children}) {
                 <Layout>
                     <MSider />
                     <Layout>
-                        <Content>
+                        <Content className="bg-white">
                             { children }
                         </Content>
                     </Layout>

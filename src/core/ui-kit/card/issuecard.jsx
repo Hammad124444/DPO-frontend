@@ -21,14 +21,14 @@ export default function MIssueCard({info}) {
                     type="primary"
                     size="large"
                     label="View"
-                    navigate={() => navigateToDetailedIssue(info.id)}
+                    action={() => navigateToDetailedIssue(info.id)}
                 />,
                 <MButtonWithIcon
                     type="danger"
                     size="large"
                     label="Edit"
                     editable
-                    navigate={() => navigateToDetailedIssue(info.id)}
+                    action={() => navigateToDetailedIssue(info.id)}
                 />
             ]}
         >
