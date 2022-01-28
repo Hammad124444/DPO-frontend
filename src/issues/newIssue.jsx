@@ -1,4 +1,4 @@
-import { Form } from 'antd';
+import { Form, Steps } from 'antd';
 // constants
 import {fundraiseTypes} from "../core/data/fundraiseTypes";
 import {stableCoins} from "../core/data/stableCoins";

@@ -1,3 +1,4 @@
+import MLayoutWithHeaderAndFooter from "../../../layout/layout-headerAndFooter";
 import MIssueDetailById from "../../../issues/detailById";
 
 export default function MIssueById(props) {
@@ -14,4 +15,12 @@ export async function getServerSideProps(context) {
             issueId: issueId
         }
     }
+}
+
+MIssueById.getLayout = function getLayout(page) {
+    return (
+        <MLayoutWithHeaderAndFooter>
+            { page }
+        </MLayoutWithHeaderAndFooter>
+    )
 }
