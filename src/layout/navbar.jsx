@@ -21,7 +21,11 @@ export default function MNavbar () {
                     <Menu mode="horizontal" theme="light" className="justify-content-end">
                         {
                             menus.map((el) => (
-                                <Menu.Item key={ el.key }>{ el.name }</Menu.Item>
+                                <Menu.Item key={ el.key }>
+                                    <Link href={ el.url }>
+                                        { el.name }
+                                    </Link>
+                                </Menu.Item>
                             ))
                         }
                         <SubMenu key="SubMenu" icon={<UserOutlined />}>
