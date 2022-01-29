@@ -6,7 +6,7 @@ export default function MKNTypography({ title, content }) {
     return(
         <Typography>
             <Title>{ title }</Title>
-            <Paragraph className="font-20">{ content }</Paragraph>
+            <Paragraph className="font-18">{ content }</Paragraph>
         </Typography>
     )
 }

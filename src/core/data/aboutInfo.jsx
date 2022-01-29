@@ -6,16 +6,19 @@ export const aboutInfo = {
 }
 
 export const mission = {
+    id: 1,
     title: 'Mission',
     content: 'Direct Private Offers supports companies raising capital via Prospectus Exempt Direct Private Offers.  We do this by introducing smart innovative capital to promising start-up and emerging growth companies; and by supporting them through the entire stock offering continuum.'
 }
 
 export const vision = {
+    id: 2,
     title: 'Vision',
     content: 'Direct Private Offers addresses an unfulfilled need in the economy by introducing a completely integrated solution to the capital-raising process. Matching smart capital to promising ventures is an important function of a healthy economy. Leveraging technology with human resources and automated internet marketing will ensure capital raises are cost-efficient.  Direct Private Offers is committed to the ongoing development of technology, human resources, and ‘lean start-up business model generation’.'
 }
 
 export const approach = {
+    id: 3,
     title: 'Approach',
     content: 'Direct Private Offers is a niche Funding Portal that uses technology to maintain competitive advantages over competitors.   We leverage Social Media, Digital Marketing channels, and active ‘personal touch’ marketing to attract Investors to Innovative Prospectus Exempt Direct Private Offers.  We record and monitor website traffic to the respective listings. Analyzing these metrics allows us to support our Issuers by helping them focus their marketing efforts.  DPO deploys well-informed staff and partners and is dedicated to employing state of the art solutions. '
 }
