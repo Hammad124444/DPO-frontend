@@ -33,7 +33,7 @@ export default function MSAbout() {
             <Divider dashed />
             {
                 aboutItems.map((el) => (
-                    <MKAboutItem key={el.id} info={el}/>
+                    <MKAboutItem key={el.id} info={el} background={el.background}/>
                 ))
             }
         </div>

@@ -2,11 +2,11 @@ import { Typography } from "antd";
 
 const { Title, Paragraph } = Typography;
 
-export default function MKNTypography({ title, content }) {
+export default function MKNTypography({ title, content, color }) {
     return(
         <Typography>
-            <Title>{ title }</Title>
-            <Paragraph className="font-18">{ content }</Paragraph>
+            <Title className={color}>{ title }</Title>
+            <Paragraph className={"font-18 " + color}>{ content }</Paragraph>
         </Typography>
     )
 }
