@@ -11,10 +11,11 @@ export default function MSider() {
         setState(collapsed);
       };
     return(
-
         <Sider width={200} collapsible collapsed={state} onCollapse={ onCollapse }>
             <Menu mode='inline'
-                style={{ height: '100%', borderRight: 0 }}>
+                style={{ height: '100%', borderRight: 0}}
+                theme={"dark"}
+            >
                 <Menu.Item key="active" icon={<CheckCircleOutlined />}>
                     <Link href={"/issue"}>
                         Active Issues

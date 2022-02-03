@@ -1,9 +1,11 @@
 import Image from "next/image";
 import MKNTypography from "../core/ui-kit/typography/nTypography";
-import { aboutInfo, mission, vision, approach } from "../core/data/aboutInfo";
+import { aboutInfo, mission, vision, approach } from "../core/data/static/aboutInfo";
 import MPrimaryBtn from "../core/ui-kit/buttons/primaryBtn";
 import { useRouter } from "next/router";
 import { Divider } from "antd";
+import MKAboutItem from "../core/ui-kit/card/aboutItem";
+
 
 
 
@@ -12,6 +14,8 @@ export default function MSAbout() {
     const navigateToHowItWorks = async () => {
         await router.push('/how-it-works');
     }
+
+    const aboutItems = [ mission, vision, approach ]
 
     return(
         <div className="container pt-30">
@@ -27,9 +31,11 @@ export default function MSAbout() {
                 </div>
             </div>
             <Divider dashed />
-            <div className="ant-row pt-30">
-
-            </div>
+            {
+                aboutItems.map((el) => (
+                    <MKAboutItem key={el.id} info={el} background={el.background}/>
+                ))
+            }
         </div>
     )
 }

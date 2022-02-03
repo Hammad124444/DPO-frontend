@@ -1,16 +1,16 @@
 import { Card } from 'antd';
-import {BulbOutlined} from "@ant-design/icons";
 import MPrimaryBtn from "../buttons/primaryBtn";
 
 const { Meta } = Card;
 
 export default function MLandingOptionCard({info}) {
+
     return (
         <Card
-            className="pt-30"
-            cover={<BulbOutlined style={{ fontSize: '50px'}} />}
+            className="pt-30 mr-20"
+            cover={info.icon}
             actions={[
-                <MPrimaryBtn key={info.id} type="default" label={info.button} size="default"/>
+                <MPrimaryBtn size="large" ghost key={info.id} type="danger" label={info.button} />
             ]}
         >
             <Meta

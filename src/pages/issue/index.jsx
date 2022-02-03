@@ -1,4 +1,4 @@
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 import MLayoutIssues from "../../layout/layout-issues";
 import MIssueOverView from "../../issues/overview";
 

@@ -1,4 +1,4 @@
-@for $i from 1 through 40 {
+@for $i from 10 through 50 {
     .ml-#{$i} {
         margin-left: #{$i}px !important;
     }
@@ -34,5 +34,5 @@
     margin: auto;
 }
 .no-padding {
-    padding: 0px !important
+    padding: 0 !important
 }
