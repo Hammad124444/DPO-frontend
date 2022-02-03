@@ -1,7 +1,7 @@
 import { Button } from 'antd';
 
 
-export default function MButtonWithIcon({label, size, type, action, icon, ghost}) {
+export default function MButtonWithIcon({label, size, type, action, icon, ghost, className}) {
     return(
         <>
             <Button
@@ -10,6 +10,7 @@ export default function MButtonWithIcon({label, size, type, action, icon, ghost}
                 icon={icon}
                 onClick={action}
                 ghost={ghost}
+                className={className}
             >{ label }</Button>
         </>
     )

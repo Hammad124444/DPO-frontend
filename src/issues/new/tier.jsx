@@ -4,13 +4,13 @@ import MEditInput from "../../core/ui-kit/inputs/editInput";
 
 export default function MNewIssueTier() {
     return(
-        <Form {...formLayout}>
+        <>
             <Form.Item  label="Rate per Tier">
                 <MEditInput prefix="$" placeholder="Rate Per Tier"/>
             </Form.Item>
             <Form.Item label="Total ST per Tier">
                 <MEditInput placeholder="Total ST per Tier"/>
             </Form.Item>
-        </Form>
+        </>
     )
 }
