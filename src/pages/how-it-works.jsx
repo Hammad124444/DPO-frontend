@@ -1,6 +1,16 @@
+import MSHowItWorks from "../staticInfo/howitworks";
+import MLayoutWithHeaderAndFooter from "../layout/layout-headerAndFooter";
 
 export default function howItWorks() {
     return(
-        <h1>How it works Page</h1>
+        <MSHowItWorks />
+    )
+}
+
+howItWorks.getLayout = function getLayout(page) {
+    return (
+        <MLayoutWithHeaderAndFooter>
+            {page}
+        </MLayoutWithHeaderAndFooter>
     )
 }

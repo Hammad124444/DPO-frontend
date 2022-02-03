@@ -1,6 +1,7 @@
-import { Card, Button } from 'antd';
+import { Card } from 'antd';
 import Image from 'next/image';
 import { EyeOutlined, EditOutlined } from "@ant-design/icons";
+import MButtonWithIcon from "../buttons/iconButton";
 
 export default function MIssueDetailCard({ background, alt }) {
     return(
@@ -10,16 +11,8 @@ export default function MIssueDetailCard({ background, alt }) {
                 <Image src={background} alt={alt} width={500} height={400}/>
             }
             actions={[
-                <Button
-                    type="primary"
-                    size="large"
-                    icon={<EyeOutlined />}
-                >Investors</Button>,
-                <Button
-                    type="danger"
-                    size="large"
-                    icon={<EditOutlined />}
-                >Edit</Button>
+                <MButtonWithIcon type={'primary'} size={'large'} label={'Investors'} children={<EyeOutlined />} />,
+                <MButtonWithIcon type={'danger'} size={'large'} label={'Edit'} children={<EditOutlined />} />
             ]}
         />
     )

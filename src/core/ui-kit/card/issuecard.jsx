@@ -3,12 +3,13 @@ import { Card } from 'antd';
 import MButtonWithIcon from "../buttons/iconButton";
 import MTag from "../tags/tag";
 import Image from 'next/image';
+import {EditOutlined, EyeOutlined} from "@ant-design/icons";
 const { Meta } = Card;
 
 export default function MIssueCard({info}) {
     const router = useRouter();
-    const navigateToDetailedIssue = (id) => {
-        router.push(`/issue/${id}`);
+    const navigateToDetailedIssue = (pass) => {
+        router.push(`/issue/${pass}`);
     }
 
     return(
@@ -22,13 +23,14 @@ export default function MIssueCard({info}) {
                     size="large"
                     label="View"
                     action={() => navigateToDetailedIssue(info.id)}
+                    children={<EyeOutlined />}
                 />,
                 <MButtonWithIcon
                     type="danger"
                     size="large"
                     label="Edit"
-                    editable
                     action={() => navigateToDetailedIssue(info.id+'/edit')}
+                    children={<EditOutlined />}
                 />
             ]}
         >

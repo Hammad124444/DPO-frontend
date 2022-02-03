@@ -1,5 +1,5 @@
 import { Layout, Menu } from 'antd';
-import { menus }  from '../core/data/menu';
+import { menus }  from '../core/data/layoutItems/menu';
 import Link from 'next/link';
 import { UserOutlined, LoginOutlined, UsergroupAddOutlined } from '@ant-design/icons/lib/icons';
 

@@ -3,7 +3,7 @@ import MLandingOptions from "./options";
 import MLandingWhyChoose from "./whychoose";
 import MLandingCallUs from "./callus";
 
-import {LandingCards} from "../core/data/landingcards";
+import {LandingCards} from "../core/data/landing/landingcards";
 import {WhyChooseUs} from "../core/data/landing/chooseus";
 import { Divider} from "antd";
 import MLandscape from "./landscape";

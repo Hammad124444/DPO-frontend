@@ -1,27 +1,16 @@
 import { Button } from 'antd';
-import {EditOutlined, EyeOutlined} from "@ant-design/icons";
 
-export default function MButtonWithIcon({label, size, type, editable, action}) {
+
+export default function MButtonWithIcon({label, size, type, action, icon, ghost}) {
     return(
         <>
-            {
-                editable ? (
-                    <Button
-                        type={type}
-                        size={size}
-                        icon={<EditOutlined />}
-                        onClick={action}
-                        ghost={true}
-                    >{ label }</Button>
-                ) : (
-                    <Button
-                        type={type}
-                        size={size}
-                        icon={<EyeOutlined />}
-                        onClick={action}
-                    >{ label }</Button>
-                )
-            }
+            <Button
+                type={type}
+                size={size}
+                icon={icon}
+                onClick={action}
+                ghost={ghost}
+            >{ label }</Button>
         </>
     )
 }
