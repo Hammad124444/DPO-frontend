@@ -8,10 +8,10 @@ export default function MLayoutWithHeaderAndFooter({ children }) {
     return(
         <Layout>
             <MNavbar />
-            <Content>
+            <Content className="bg-white">
                 { children }
             </Content>
-            <MFooter />
+            {/*<MFooter />*/}
         </Layout>
     )
 }

@@ -10,7 +10,8 @@ export default function MButtonWithIcon({label, size, type, editable, action}) {
                         type={type}
                         size={size}
                         icon={<EditOutlined />}
-                        onClick={navigate}
+                        onClick={action}
+                        ghost={true}
                     >{ label }</Button>
                 ) : (
                     <Button

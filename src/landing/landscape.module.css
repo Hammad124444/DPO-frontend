@@ -1,0 +1,11 @@
+.landscape {
+    /*background-image: url("../../public/assets/images/landscape.jpg") !important;*/
+    background-image: url("https://zos.alipayobjects.com/rmsportal/gGlUMYGEIvjDOOw.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+}
+
+.mcard {
+    background: rgba(0, 0, 0,0.2) !important;
+}

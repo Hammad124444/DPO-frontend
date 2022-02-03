@@ -2,7 +2,7 @@ import React from 'react';
 import Head from "next/head";
 import styles from '../../styles/Home.module.css'
 import { UserAuthContext } from "../states/userAuth";
-import {BackTop} from "antd";
+import { BackTop } from "antd";
 
 export default function MLayOutRoot({children}) {
     return (

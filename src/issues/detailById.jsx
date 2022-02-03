@@ -2,7 +2,7 @@ import { Descriptions } from "antd";
 import { detailedIssueInfo } from "../core/data/issues_detailed";
 import MRangeDatePicker from "../core/ui-kit/datepicker/rangedatepicker";
 import MTag from "../core/ui-kit/tags/tag";
-import MNormalCard from "../core/ui-kit/card/normalcard";
+import MIssueDetailCard from "../core/ui-kit/card/detailissuecard";
 
 
 export default function MIssueDetailById({issueId}) {
@@ -11,7 +11,7 @@ export default function MIssueDetailById({issueId}) {
     return(
         <div className="container pt-30 ant-row">
             <div className="ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-8 ant-col-xl-8">
-                <MNormalCard background={issueDetail.background} alt={issueDetail.title}/>
+                <MIssueDetailCard background={issueDetail.background} alt={issueDetail.title}/>
             </div>
             <div className="ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-16 ant-col-xl-16 ph-30">
                 <Descriptions title={issueDetail.title} className="d-flex flex-column" bordered

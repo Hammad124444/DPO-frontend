@@ -28,7 +28,7 @@ export default function MIssueCard({info}) {
                     size="large"
                     label="Edit"
                     editable
-                    action={() => navigateToDetailedIssue(info.id)}
+                    action={() => navigateToDetailedIssue(info.id+'/edit')}
                 />
             ]}
         >

@@ -11,7 +11,7 @@ export default function MLayoutIssues({ children }) {
             </Header>
             <Layout>
                 <MSider />
-                <Content>
+                <Content className="bg-white">
                         { children }
                 </Content>
             </Layout>

@@ -1,5 +1,5 @@
 export const WhyChooseUs = {
-    img: '/assets/images/whychooseus.jpg',
+    img: '/assets/images/landscape.jpg',
     title: 'Why Choose Direct Private Offers ?',
     subTitle: 'Because business need smart innovative capital for sustainable growth',
     paragraphs: [

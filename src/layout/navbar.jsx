@@ -8,8 +8,8 @@ const { SubMenu } = Menu;
 
 export default function MNavbar () {
     return (
-        <Header className='header no-padding'>
-            <div className="ant-row bg-white">
+        <Header className='p-sticky top-0 no-padding z-10'>
+            <div className="ant-row">
                 <div className="text-center ant-col-6 ant-col-sm-24 ant-col-md-6 ant-col-xl-5">
                     <Link href={"/"}>
                         <a id="logo">
@@ -18,7 +18,7 @@ export default function MNavbar () {
                     </Link>
                 </div>
                 <div className="ant-col-18 menu-row ant-col-sm-0 ant-col-md-18 ant-col-xl-19">
-                    <Menu mode="horizontal" className="justify-content-end">
+                    <Menu mode="horizontal" className="justify-content-flex-end" style={{border: 0}} theme={"dark"}>
                         {
                             menus.map((el) => (
                                 <Menu.Item key={ el.key }>
