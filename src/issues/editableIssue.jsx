@@ -1,39 +1,38 @@
 import { Tabs } from 'antd';
-import EPeriod from "./edit/timesEdit";
-import EFundType from "./edit/fundTypeEdit";
-import ECreditLimit from "./edit/limitEdit";
-import EStatus from "./edit/statusEdit";
-import EInvestors from "./edit/investorsEdit";
-import ETier from "./edit/tierEdit";
+import {steps} from "../core/data/issue/newissueitems";
+import {useState} from "react";
+import MButtonWithIcon from "../core/ui-kit/buttons/iconButton";
+import {SaveOutlined} from "@ant-design/icons";
 
 const { TabPane } = Tabs;
 
 export default function MEditIssueDetailById() {
+    const [current, setCurrent] = useState(1);
+    const saveAction = () => {
+        // setCurrent()
+    }
     return(
-        <Tabs
-            defaultActiveKey="1"
-            tabPosition="left"
-            size="large"
-            style={{ minHeight: '100vh' }}
-        >
-            <TabPane tab="Period Times" key="1">
-                <EPeriod />
-            </TabPane>
-            <TabPane tab="Credit Limit" key="2">
-                <ECreditLimit />
-            </TabPane>
-            <TabPane tab="Status" key="3">
-                <EStatus />
-            </TabPane>
-            <TabPane tab="Tier" key="4">
-                <ETier />
-            </TabPane>
-            <TabPane tab="Fund Types" key="5">
-                <EFundType />
-            </TabPane>
-            <TabPane tab="Investors" key="6">
-                <EInvestors />
-            </TabPane>
-        </Tabs>
+        <div className={'pt-40 pl-30 card-container'}>
+            <Tabs
+                defaultActiveKey={current}
+                tabPosition="left"
+                size="large"
+                style={{ minHeight: '100vh' }}
+                onChange={() => saveAction()}
+            >
+                {
+                    steps.map((el, index) => (
+                        <TabPane tab={el.title} key={index + 1}>
+                            <div className={'container'}>
+                                {el.content}
+                            </div>
+                            <div className={'d-block text-center pt-40'}>
+                                <MButtonWithIcon label={'Save Changes'} type={'primary'} size={'large'} icon={<SaveOutlined />}/>
+                            </div>
+                        </TabPane>
+                    ))
+                }
+            </Tabs>
+        </div>
     )
 }

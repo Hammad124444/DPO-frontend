@@ -4,10 +4,10 @@ import {Form} from "antd";
 
 export default function MNewIssuePeriod() {
     return(
-        <Form {...formLayout}>
+        <>
             <Form.Item label="Active Period" {...rangePickerConfig}>
                 <MRangeDatePicker type="new"/>
             </Form.Item>
-        </Form>
+        </>
     )
 }

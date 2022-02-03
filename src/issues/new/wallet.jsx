@@ -4,13 +4,13 @@ import MEditInput from "../../core/ui-kit/inputs/editInput";
 
 export default function MNewIssueWallet() {
     return(
-        <Form {...formLayout}>
+        <>
             <Form.Item label="Fund wallet">
                 <MEditInput placeholder="Fund Wallet Address"/>
             </Form.Item>
             <Form.Item label="Treasury wallet">
                 <MEditInput placeholder="Treasury Wallet Address"/>
             </Form.Item>
-        </Form>
+        </>
     )
 }
