@@ -1,6 +1,6 @@
-import {Form, Steps, Button } from 'antd';
+import {Form, Steps } from 'antd';
 import {useState} from "react";
-import {steps} from "../core/data/issue/newissueitems";
+import { newIsuseSteps } from "../core/data/issue/newissueitems";
 import {formLayout} from "../core/data/config/ui-config";
 import MButtonWithIcon from "../core/ui-kit/buttons/iconButton";
 import {SwapLeftOutlined, SwapRightOutlined, SaveOutlined} from "@ant-design/icons";
@@ -19,7 +19,7 @@ export default function MIssueCreate() {
             <div className={'ant-col-sm-12 ant-col-md-8 ant-col-lg-6 ant-col-xl-6'}>
                 <Steps direction="vertical" current={state} onChange={stepChange}>
                     {
-                        steps.map((el) => (
+                        newIsuseSteps.map((el) => (
                             <Step key={el.title} title={el.title} description={el.description}/>
                         ))
                     }
@@ -28,7 +28,7 @@ export default function MIssueCreate() {
             <div className={'ant-col-sm-12 ant-col-md-16 ant-col-lg-18 ant-col-xl-18 d-flex flex-column justify-content-center align-items-center'}>
                 <Form {...formLayout}>
                     {
-                        steps[state].content
+                        newIsuseSteps[state].content
                     }
                     <div className={'d-block text-center mt-50'}>
                         {
@@ -39,21 +39,19 @@ export default function MIssueCreate() {
                             )
                         }
                         {
-                            state < steps.length - 1 && (
+                            state < newIsuseSteps.length - 1 && (
                                 <MButtonWithIcon label={'Next'} action={() => setState(state + 1)}
                                                  type={'primary'} size={'large'} icon={<SwapRightOutlined />}
                                 />
                             )
                         }
                         {
-                            state == steps.length - 1 && (
+                            state == newIsuseSteps.length - 1 && (
                                 <MButtonWithIcon label={'Submit'}
                                     type={'danger'} size={'large'} icon={<SaveOutlined />}
                                 />
                             )
                         }
-
-
                     </div>
                 </Form>
             </div>

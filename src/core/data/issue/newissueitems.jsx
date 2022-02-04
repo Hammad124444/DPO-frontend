@@ -4,7 +4,7 @@ import MNewIssueTier from "../../../issues/items/tier";
 import MNewIssueFundRaise from "../../../issues/items/fundraise";
 import MNewIssueWallet from "../../../issues/items/wallet";
 
-export const steps = [
+export const newIsuseSteps = [
     {
         title: 'Meta',
         description: 'General Info of issue',

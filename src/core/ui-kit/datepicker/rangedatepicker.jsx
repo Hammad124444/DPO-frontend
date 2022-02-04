@@ -4,7 +4,7 @@ import moment from 'moment';
 
 export default function MRangeDatePicker({ type, start_date, end_date }) {
     const dateFormat = 'YYYY-MM-DD';
-    if (type == 'items') {
+    if (type == 'new') {
         // Component to be rendered on Issue Creation Page
         return(
                 <RangePicker renderExtraFooter={() => 'extra footer'} size="large"/>
