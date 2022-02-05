@@ -4,15 +4,15 @@ export const footerOptions = {
         children: [
             {
                 label: 'Process',
-                url: 'listing-process'
+                url: '/listing/process'
             },
             {
                 label: 'Costs',
-                url: ''
+                url: '/listing/costs'
             },
             {
                 label: 'Support',
-                url: ''
+                url: 'listing/support'
             },
         ]
     },
