@@ -5,12 +5,12 @@ export const landscapeInfo = {
         {
             type: 'danger',
             label: 'Get Started',
-            navigation: '/about'
+            navigation: '/information/about'
         },
         {
             type: 'primary',
             label: 'How it works',
-            navigation: '/how-it-works'
+            navigation: '/information/how-it-works'
         }
     ]
 }

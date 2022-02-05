@@ -7,11 +7,11 @@ export const menus = [
     {
         key: '2',
         name: 'About',
-        url: '/about'
+        url: '/information/about'
     },
     {
         key: '3',
         name: 'Contact',
-        url: '/contact'
+        url: '/information/contact'
     }
 ]
