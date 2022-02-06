@@ -12,7 +12,7 @@ export const footerOptions = {
             },
             {
                 label: 'Support',
-                url: 'listing/support'
+                url: '/listing/support'
             },
         ]
     },
@@ -21,15 +21,15 @@ export const footerOptions = {
         children: [
             {
                 label: 'About',
-                url: '/about'
+                url: '/information/about'
             },
             {
                 label: 'Privacy Policy',
-                url: '/privacypolicy'
+                url: '/information/privacypolicy'
             },
             {
                 label: 'Terms & Conditions',
-                url: '/termsandconditons'
+                url: '/information/termsandconditons'
             }
         ]
     }
