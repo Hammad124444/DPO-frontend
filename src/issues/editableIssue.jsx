@@ -1,8 +1,8 @@
 import { Tabs } from 'antd';
-import {steps} from "../core/data/issue/newissueitems";
-import {useState} from "react";
+import { useState } from "react";
 import MButtonWithIcon from "../core/ui-kit/buttons/iconButton";
-import {SaveOutlined} from "@ant-design/icons";
+import { SaveOutlined } from "@ant-design/icons";
+import {existingIssueItems} from "../core/data/issue/existingissueitems";
 
 const { TabPane } = Tabs;
 
@@ -12,27 +12,34 @@ export default function MEditIssueDetailById() {
         // setCurrent()
     }
     return(
-        <div className={'pt-40 pl-30 card-container'}>
-            <Tabs
-                defaultActiveKey={current}
-                tabPosition="left"
-                size="large"
-                style={{ minHeight: '100vh' }}
-                onChange={() => saveAction()}
-            >
-                {
-                    steps.map((el, index) => (
-                        <TabPane tab={el.title} key={index + 1}>
-                            <div className={'container'}>
-                                {el.content}
-                            </div>
-                            <div className={'d-block text-center pt-40'}>
-                                <MButtonWithIcon label={'Save Changes'} type={'primary'} size={'large'} icon={<SaveOutlined />}/>
-                            </div>
-                        </TabPane>
-                    ))
-                }
-            </Tabs>
+        <div className={'container ant-row'}>
+            <div className={'ant-col-xs-24 ant-col-sm-12 ant-col-md-8 ant-col-lg-6 ant-col-xl-6'}>
+
+            </div>
+            <div className={'ant-col-xs-24 ant-col-sm-12 ant-col-md-16 ant-col-lg-18 ant-col-xl-18'}>
+                <div className={'pt-40 pl-30 card-container'}>
+                    <Tabs
+                        defaultActiveKey={current}
+                        tabPosition="top"
+                        size="large"
+                        onChange={() => saveAction()}
+                        type={'card'}
+                    >
+                        {
+                            existingIssueItems.map((el, index) => (
+                                <TabPane tab={el.title} key={index + 1}>
+                                    <div className={'container'}>
+                                        {el.content}
+                                    </div>
+                                    <div className={'d-block text-center pt-40'}>
+                                        <MButtonWithIcon label={'Save Changes'} type={'primary'} size={'large'} icon={<SaveOutlined />}/>
+                                    </div>
+                                </TabPane>
+                            ))
+                        }
+                    </Tabs>
+                </div>
+            </div>
         </div>
     )
 }

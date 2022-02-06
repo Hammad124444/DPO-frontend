@@ -1,3 +1,4 @@
+import React from 'react';
 // Original Ant Style import
 import 'antd/dist/antd.min.css';
 // Custom Style Import
@@ -15,11 +16,11 @@ export default function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
 
   return (
-    <MLayOutRoot>
-      {
-        getLayout(<Component {...pageProps} />)
-      }
-    </MLayOutRoot>
+        <MLayOutRoot>
+          {
+            getLayout(<Component {...pageProps} />)
+          }
+        </MLayOutRoot>
   )
 }
 

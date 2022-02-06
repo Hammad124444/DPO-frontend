@@ -108,7 +108,7 @@ $positions: absolute, relative, sticky;
 }
 
 @for $i from 1 through 10 {
-  $temp: $i/10;
+  $temp: calc(#{$i} / 10);
   .o-#{$i} {
     opacity: #{$temp};
   }

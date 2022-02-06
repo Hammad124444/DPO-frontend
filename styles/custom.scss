@@ -1,3 +1,4 @@
+@import './colors.scss';
 #logo img {
     height: 40px;
 }
@@ -7,3 +8,33 @@
         background-color: transparent !important;
     }
 }
+// tabs customization
+
+.ant-tabs-tab {
+    background-color: $green-color !important;
+    color: $white-color !important;
+    &.ant-tabs-tab-active {
+        border-color: $green-color !important;
+        border-bottom-color: white !important;
+        background-color: $white-color !important;
+        .ant-tabs-tab-btn {
+            color: $green-color !important;
+        }
+    }
+}
+
+//button customization
+
+.ant-btn-primary {
+    border-color: $green-color !important;
+    background: $green-color !important;
+    &.ant-btn-background-ghost {
+        background: transparent !important;
+        color: $green-color !important;
+    }
+}
+
+a:hover {
+    color: $green-color !important;
+}
+

@@ -3,31 +3,31 @@ import MNewIssuePeriod from "../../../issues/items/period";
 import MNewIssueTier from "../../../issues/items/tier";
 import MNewIssueFundRaise from "../../../issues/items/fundraise";
 import MNewIssueWallet from "../../../issues/items/wallet";
+import MIssueStatus from "../../../issues/items/status";
 
-export const newIsuseSteps = [
+export const existingIssueItems = [
+    {
+        title: 'Status',
+        content: <MIssueStatus />
+    },
     {
         title: 'Meta',
-        description: 'General Info of issue',
-        content:  <MNewIssueMeta />
+        content: <MNewIssueMeta />
     },
     {
         title: 'Period',
-        description: 'Period of issue',
         content: <MNewIssuePeriod />
     },
     {
         title: 'Tier',
-        description: 'Set Rate and Total Tier',
         content: <MNewIssueTier />
     },
     {
         title: 'Fund',
-        description: 'Fund Raise Types',
         content: <MNewIssueFundRaise />
     },
     {
         title: 'Wallet',
-        description: 'Fund and Treasury Wallet',
         content: <MNewIssueWallet />
-    }
+    },
 ]

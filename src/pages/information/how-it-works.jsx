@@ -1,5 +1,5 @@
-import MSHowItWorks from "../staticInfo/howitworks";
-import MLayoutWithHeaderAndFooter from "../layout/layout-headerAndFooter";
+import MSHowItWorks from "../../staticInfo/howitworks";
+import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
 
 export default function howItWorks() {
     return(
