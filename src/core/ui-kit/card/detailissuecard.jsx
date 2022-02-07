@@ -7,7 +7,6 @@ import {useRouter} from "next/router";
 export default function MIssueDetailCard({ background, alt }) {
     const router = useRouter();
     const naviageTo = (url) => {
-        console.log(router.asPath);
         router.push(router.asPath + url);
     }
     return(

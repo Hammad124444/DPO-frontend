@@ -8,26 +8,26 @@ import MIssueStatus from "../../../issues/items/status";
 export const existingIssueItems = [
     {
         title: 'Status',
-        content: <MIssueStatus />
+        contentGenerator: (props) => <MIssueStatus {...props} />
     },
     {
         title: 'Meta',
-        content: <MNewIssueMeta />
+        contentGenerator: (props) => <MNewIssueMeta {... props}/>
     },
     {
         title: 'Period',
-        content: <MNewIssuePeriod />
+        contentGenerator: (props) => <MNewIssuePeriod {... props}/>
     },
     {
         title: 'Tier',
-        content: <MNewIssueTier />
+        contentGenerator: (props) => <MNewIssueTier {... props}/>
     },
     {
         title: 'Fund',
-        content: <MNewIssueFundRaise />
+        contentGenerator: (props) => <MNewIssueFundRaise {... props}/>
     },
     {
         title: 'Wallet',
-        content: <MNewIssueWallet />
+        contentGenerator: (props) => <MNewIssueWallet {... props}/>
     },
 ]
