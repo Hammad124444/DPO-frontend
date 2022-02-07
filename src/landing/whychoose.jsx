@@ -5,7 +5,7 @@ export default function MLandingWhyChoose({detail}) {
         <div className="ant-row container pt-30">
             <h1 className="d-block font-32 m-auto">{detail.title}</h1>
             <h3 className="d-block font-28 m-auto">{detail.subTitle}</h3>
-            <div className="ant-col-12 ant-col-sm-24 ant-col-md-12 ant-col-xl-12 pt-20">
+            <div className="ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-xl-12 pt-20">
                 {
                     detail.paragraphs.map((el) => (
                         <div key={el.id}>
@@ -15,7 +15,7 @@ export default function MLandingWhyChoose({detail}) {
                     ))
                 }
             </div>
-            <div className="pl-20 ant-col-12 ant-col-sm-24 ant-col-md-12 ant-col-xl-12 pt-20">
+            <div className="pl-20 ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-xl-12 pt-20">
                 <Image  alt="Why Choose Us"
                     src={detail.img} layout="responsive"
                         width={30}
