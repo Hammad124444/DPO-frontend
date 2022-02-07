@@ -44,13 +44,16 @@ export const detailedIssueInfo = [
         tminted: 5000,
         tsold: 1450,
         fundraised: {
-            eth: 4.5,
-            tokens: {
+            fiat: {
+                usd: 21000,
+                cad: 45000
+            },
+            crypto: {
+                ether: 4.5,
                 usdt: 2400,
                 dai: 1200,
                 usdc: 3500
-            },
-            cash: 42000
+            }
         },
         investors: 4,
         balanceLocked: 15000,
@@ -70,13 +73,16 @@ export const detailedIssueInfo = [
         tminted: 5000,
         tsold: 1450,
         fundraised: {
-            eth: 4.5,
-            tokens: {
+            fiat: {
+                usd: 21000,
+                cad: 45000
+            },
+            crypto: {
+                ether: 4.5,
                 usdt: 2400,
                 dai: 1200,
                 usdc: 3500
-            },
-            cash: 42000
+            }
         },
         investors: 4,
         balanceLocked: 15000,
@@ -95,13 +101,16 @@ export const detailedIssueInfo = [
         tminted: 5000,
         tsold: 1450,
         fundraised: {
-            eth: 4.5,
-            tokens: {
+            fiat: {
+                usd: 21000,
+                cad: 45000
+            },
+            crypto: {
+                ether: 4.5,
                 usdt: 2400,
                 dai: 1200,
                 usdc: 3500
-            },
-            cash: 42000
+            }
         },
         investors: 4,
         balanceLocked: 15000,

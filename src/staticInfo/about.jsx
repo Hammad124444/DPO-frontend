@@ -10,6 +10,7 @@ import MKAboutItem from "../core/ui-kit/card/aboutItem";
 
 
 export default function MSAbout() {
+    
     const router = useRouter();
     const navigateToHowItWorks = async () => {
         await router.push('/how-it-works');

@@ -37,9 +37,36 @@ export default function MIssueDetailById({issueId}) {
                         { issueDetail.tsold }
                     </Descriptions.Item>
                     <Descriptions.Item label="Fund Raised">
-                        <MTag color="magenta" label="4.5 ETH"/>
-                        <MTag color="orange" label="6500 USDT"/>
-                        <MTag color="purple" label="$ 7500"/>
+                        {
+                            issueDetail.fundraised.fiat.usd ? (
+                                <MTag color="orange" label={'$' + issueDetail.fundraised.fiat.usd  + '(US)'}/>
+                            ): (<></>)
+                        }
+                        {
+                            issueDetail.fundraised.fiat.cad ? (
+                                <MTag color="purple" label={'$' + issueDetail.fundraised.fiat.cad  + '(CA)'}/>
+                            ): (<></>)
+                        }
+                        {
+                            issueDetail.fundraised.crypto.ether ? (
+                                <MTag color="magenta" label={issueDetail.fundraised.crypto.ether  + ' Ether'}/>
+                            ): (<></>)
+                        }
+                        {
+                            issueDetail.fundraised.crypto.dai ? (
+                                <MTag color="geekblue" label={issueDetail.fundraised.crypto.dai  + ' DAI'}/>
+                            ): (<></>)
+                        }
+                        {
+                            issueDetail.fundraised.crypto.usdt ? (
+                                <MTag color="red" label={issueDetail.fundraised.crypto.usdt  + ' USDT'}/>
+                            ): (<></>)
+                        }
+                        {
+                            issueDetail.fundraised.crypto.usdc ? (
+                                <MTag color="cyan" label={issueDetail.fundraised.crypto.ether  + 'USDC'}/>
+                            ): (<></>)
+                        }
                     </Descriptions.Item>
                     <Descriptions.Item label="Number of Investors">
                         { issueDetail.investors }

@@ -17,8 +17,8 @@ export default function MIssueDetailCard({ background, alt }) {
                 <Image src={background} alt={alt} width={500} height={400}/>
             }
             actions={[
-                <MButtonWithIcon type={'primary'} size={'large'} label={'Investors'} children={<EyeOutlined />} action={() => naviageTo('/investors')}/>,
-                <MButtonWithIcon type={'danger'} size={'large'} label={'Edit'} children={<EditOutlined />} action={() => naviageTo('/edit')} />
+                <MButtonWithIcon type={'primary'} size={'large'} label={'Investors'} icon={<EyeOutlined />} action={() => naviageTo('/investors')}/>,
+                <MButtonWithIcon type={'danger'} size={'large'} label={'Edit'} icon={<EditOutlined />} action={() => naviageTo('/edit')} />
             ]}
         />
     )
