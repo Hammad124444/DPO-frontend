@@ -17,13 +17,13 @@ export default function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
 
   return (
-        <NotificationContextProvider>
             <MLayOutRoot>
-              {
-                getLayout(<Component {...pageProps} />)
-              }
+                <NotificationContextProvider>
+                  {
+                    getLayout(<Component {...pageProps} />)
+                  }
+                </NotificationContextProvider>
             </MLayOutRoot>
-        </NotificationContextProvider>
   )
 }
 

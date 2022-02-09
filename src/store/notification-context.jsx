@@ -1,4 +1,5 @@
-import {createContext, useState } from "react";
+import {createContext, useEffect, useState} from "react";
+import {closeNotification, openNotification} from "../core/ui-kit/notification/notification";
 
 const NotificationContext = createContext({
     notification: null, // {title, message, status}
@@ -8,6 +9,19 @@ const NotificationContext = createContext({
 
 export function NotificationContextProvider(props) {
     const [activeNotification, setActiveNotification] = useState();
+
+    useEffect(() => {
+        if (activeNotification) {
+            openNotification(activeNotification);
+            const timer = setTimeout(() => {
+                closeNotification(activeNotification.key);
+                setActiveNotification(null);
+            }, 3000);
+            return () => {
+                clearTimeout(timer);
+            }
+        }
+    }, activeNotification);
 
     const showNotificationHandler = (notificationData) => {
         setActiveNotification(notificationData);

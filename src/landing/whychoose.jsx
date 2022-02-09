@@ -1,6 +1,11 @@
 import Image from 'next/image';
-export default function MLandingWhyChoose({detail}) {
+import {useContext} from "react";
+import NotificationContext from "../store/notification-context";
+import { Button } from 'antd';
+import {statusIcons} from "../core/data/config/statusIcons";
 
+export default function MLandingWhyChoose({detail}) {
+    const notificationCtx = useContext(NotificationContext);
     return(
         <div className="ant-row container pt-30">
             <h1 className="d-block font-32 m-auto">{detail.title}</h1>
@@ -22,6 +27,12 @@ export default function MLandingWhyChoose({detail}) {
                         height={30}
                 />
             </div>
+
+            <Button onClick={() => notificationCtx.showNotification({
+                title: 'test',
+                description: 'test',
+                icon: statusIcons.nSuccess
+            })}>Test</Button>
         </div>
 
     )
