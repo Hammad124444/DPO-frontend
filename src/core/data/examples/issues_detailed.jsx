@@ -24,11 +24,11 @@ export const detailedIssueInfo = [
                 usdc: 3500
             }
         },
-        investors: 4,
+        investors: [1,2],
         balanceLocked: 15000,
         balanceUnlocked: 41000,
         start_date: '01/01/2022',
-        end_date: '03/25/2022'
+        end_date: '03/25/2022',
     },
     {
         id: 2,
@@ -55,7 +55,7 @@ export const detailedIssueInfo = [
                 usdc: 3500
             }
         },
-        investors: 4,
+        investors: [3,4],
         balanceLocked: 15000,
         balanceUnlocked: 41000
     },
@@ -84,7 +84,7 @@ export const detailedIssueInfo = [
                 usdc: 3500
             }
         },
-        investors: 4,
+        investors: [5,6],
         balanceLocked: 15000,
         balanceUnlocked: 41000
     },
@@ -112,7 +112,7 @@ export const detailedIssueInfo = [
                 usdc: 3500
             }
         },
-        investors: 4,
+        investors: [7,8],
         balanceLocked: 15000,
         balanceUnlocked: 41000
     }

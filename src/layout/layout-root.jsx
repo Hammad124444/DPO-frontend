@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import Head from "next/head";
 import styles from '../../styles/Home.module.css'
-import { UserAuthContext } from "../states/userAuth";
+
 import { BackTop } from "antd";
 
 export default function MLayOutRoot({children}) {
+
     return (
         <div className={styles.container}>
             <BackTop />
@@ -14,9 +15,7 @@ export default function MLayOutRoot({children}) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>
-                <UserAuthContext.Provider value={UserAuthContext}>
-                    {children}
-                </UserAuthContext.Provider>
+                {children}
             </main>
         </div>
     )

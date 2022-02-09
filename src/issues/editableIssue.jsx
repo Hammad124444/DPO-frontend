@@ -1,12 +1,13 @@
-import { Tabs } from 'antd';
+import { Tabs, Form } from 'antd';
 import { useState } from "react";
 import MButtonWithIcon from "../core/ui-kit/buttons/iconButton";
 import { SaveOutlined } from "@ant-design/icons";
 import {existingIssueItems} from "../core/data/issue/existingissueitems";
+import {formLayout} from "../core/data/config/ui-config";
 
 const { TabPane } = Tabs;
 
-export default function MEditIssueDetailById() {
+export default function MEditIssueDetailById({issueId}) {
     const [current, setCurrent] = useState(1);
     const saveAction = () => {
         // setCurrent()
@@ -27,14 +28,16 @@ export default function MEditIssueDetailById() {
                     >
                         {
                             existingIssueItems.map((el, index) => (
-                                <TabPane tab={el.title} key={index + 1}>
-                                    <div className={'container'}>
-                                        {el.content}
-                                    </div>
-                                    <div className={'d-block text-center pt-40'}>
-                                        <MButtonWithIcon label={'Save Changes'} type={'primary'} size={'large'} icon={<SaveOutlined />}/>
-                                    </div>
-                                </TabPane>
+                                    <TabPane tab={el.title} key={index + 1}>
+                                        <div className={'container'}>
+                                            <Form {...formLayout}>
+                                            {el.contentGenerator({ issueId})}
+                                            </Form>
+                                        </div>
+                                        <div className={'d-block text-center pt-40'}>
+                                            <MButtonWithIcon label={'Save Changes'} type={'primary'} size={'large'} icon={<SaveOutlined />}/>
+                                        </div>
+                                    </TabPane>
                             ))
                         }
                     </Tabs>

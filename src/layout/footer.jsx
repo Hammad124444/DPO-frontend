@@ -29,8 +29,8 @@ export default function MFooter() {
                 <div className={'ant-col-xs-24 ant-col-sm-24 ant-col-md-8 ant-col-lg-8 ant-col-xl-8 d-flex flex-column align-items-center'}>
                     <h1 className={'font-24 font-bold c-green'}>{footerOptions.list.label}</h1>
                     {
-                        footerOptions.list.children.map((el) => (
-                            <Link href={el.url}>
+                        footerOptions.list.children.map((el, index) => (
+                            <Link href={el.url} key={'listing' + index}>
                                 <a className={'font-20'}>{el.label}</a>
                             </Link>
                         ))
@@ -39,8 +39,8 @@ export default function MFooter() {
                 <div className={'ant-col-xs-24 ant-col-sm-24 ant-col-md-8 ant-col-lg-8 ant-col-xl-8 d-flex flex-column align-items-center'}>
                     <h1 className={'font-24 font-bold c-green'}>{footerOptions.information.label}</h1>
                     {
-                        footerOptions.information.children.map((el) => (
-                            <Link href={el.url}>
+                        footerOptions.information.children.map((el, index) => (
+                            <Link href={el.url} key={'information' + index}>
                                 <a className={'font-20'}>{el.label}</a>
                             </Link>
                         ))

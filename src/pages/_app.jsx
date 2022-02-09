@@ -10,17 +10,20 @@ import '../../styles/font.scss';
 import '../../styles/colors.scss';
 // Root layout on the app
 import MLayOutRoot from '../layout/layout-root';
+import {NotificationContextProvider} from "../store/notification-context";
 
 
 export default function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
 
   return (
-        <MLayOutRoot>
-          {
-            getLayout(<Component {...pageProps} />)
-          }
-        </MLayOutRoot>
+            <MLayOutRoot>
+                <NotificationContextProvider>
+                  {
+                    getLayout(<Component {...pageProps} />)
+                  }
+                </NotificationContextProvider>
+            </MLayOutRoot>
   )
 }
 

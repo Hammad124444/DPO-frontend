@@ -69,7 +69,7 @@ export default function MIssueDetailById({issueId}) {
                         }
                     </Descriptions.Item>
                     <Descriptions.Item label="Number of Investors">
-                        { issueDetail.investors }
+                        { issueDetail.investors.length }
                     </Descriptions.Item>
                     <Descriptions.Item label="Balance Locked">
                         { issueDetail.balanceLocked }
