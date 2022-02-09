@@ -9,6 +9,8 @@ export const investors = [
         canReceiveAfter: true,
         expiryTime: Date.now(),
         registerDate: Date.now(),
+        nonAccreditLimit: 5000,
+        minInvestment: 5000,
         verifiedStatus: 1,
     },
     {
@@ -21,6 +23,8 @@ export const investors = [
         canReceiveAfter: true,
         expiryTime: Date.now(),
         registerDate: Date.now(),
+        nonAccreditLimit: 5000,
+        minInvestment: 5000,
         verifiedStatus: 2,
     },
     {
@@ -33,6 +37,8 @@ export const investors = [
         canReceiveAfter: true,
         expiryTime: Date.now(),
         registerDate: Date.now(),
+        nonAccreditLimit: 5000,
+        minInvestment: 5000,
         verifiedStatus: 3,
     },
     {
@@ -45,6 +51,8 @@ export const investors = [
         canReceiveAfter: false,
         expiryTime: Date.now(),
         registerDate: Date.now(),
+        nonAccreditLimit: 5000,
+        minInvestment: 5000,
         verifiedStatus: 1,
     },
     {
@@ -57,6 +65,8 @@ export const investors = [
         canReceiveAfter: false,
         expiryTime: Date.now(),
         registerDate: Date.now(),
+        nonAccreditLimit: 5000,
+        minInvestment: 5000,
         verifiedStatus: 1,
     },
     {
@@ -69,6 +79,8 @@ export const investors = [
         canReceiveAfter: true,
         expiryTime: Date.now(),
         registerDate: Date.now(),
+        nonAccreditLimit: 5000,
+        minInvestment: 5000,
         verifiedStatus: 1,
     },
     {
@@ -81,6 +93,8 @@ export const investors = [
         canReceiveAfter: true,
         expiryTime: Date.now(),
         registerDate: Date.now(),
+        nonAccreditLimit: 5000,
+        minInvestment: 5000,
         verifiedStatus: 2,
     },
     {
@@ -93,6 +107,8 @@ export const investors = [
         canReceiveAfter: false,
         expiryTime: Date.now(),
         registerDate: Date.now(),
+        nonAccreditLimit: 5000,
+        minInvestment: 5000,
         verifiedStatus: 3,
     },
 ]
