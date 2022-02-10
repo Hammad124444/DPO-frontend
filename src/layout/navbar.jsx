@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import { Layout, Menu } from 'antd';
 import { UserOutlined, LoginOutlined, UsergroupAddOutlined } from '@ant-design/icons/lib/icons';
 import Link from 'next/link';
@@ -7,12 +7,20 @@ import { menus }  from '../core/data/layoutItems/menu';
 const { Header } = Layout;
 const { SubMenu } = Menu;
 import styles from '../../styles/local/navbar.module.scss';
+import {useRouter} from "next/router";
 
 export default function MNavbar () {
-    // const [currentMenu, setCurrentMenu] = useState('home');
+    const router = useRouter();
+    const [currentMenu, setCurrentMenu] = useState();
+    useEffect(()=> {
+        const path = router.pathname;
+        if (path == '') {
+
+        }
+    }, [])
     const handleMenuClick = (e) => {
         console.log(e);
-        // setCurrentMenu(e.key);
+        setCurrentMenu(e.key);
     }
 
     return (
@@ -20,10 +28,17 @@ export default function MNavbar () {
             <div className="ant-row d-flex ph-30">
                 <Link href={"/"}>
                     <a className={'d-flex align-items-center ' + styles.logoarea} >
-                        <Image alt="logo" src="/assets/icons/directprivateoffers-logo-bd.png" width={300} height={54}/>
+                        <Image alt="logo"
+                               src="/assets/icons/directprivateoffers-logo-bd.png"
+                               width={300} height={54}
+                        />
                     </a>
                 </Link>
-                <Menu mode="horizontal" className={'d-block text-right ' + styles.menubar}>
+                <Menu selectedKeys={currentMenu}
+                      onClick={handleMenuClick}
+                      mode="horizontal"
+                      className={'d-block text-right ' + styles.menubar}
+                >
                     {
                         menus.mainMenus.map((element) => (
                                 <Menu.Item key={element.key}>
@@ -34,7 +49,7 @@ export default function MNavbar () {
                             )
                         )
                     }
-                    <SubMenu key='subMenu' icon={<UserOutlined />}>
+                    <SubMenu key='subMenu' icon={<UserOutlined />} title={'Account'}>
                         {
                             menus.subMenus.map((el) => (
                                     <Menu.Item key={el.key} icon={el.icon}>

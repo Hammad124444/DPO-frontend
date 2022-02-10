@@ -1,7 +1,5 @@
 @import 'colors';
-#logo img {
-    height: 40px;
-}
+
 .ant-card {
     border-radius: 10px !important;
     .ant-card-actions {
@@ -37,4 +35,33 @@
 a:hover {
     color: $green-color !important;
 }
+
+li {
+    &.ant-menu-submenu:hover  {
+        &:after {
+            border-bottom: 2px solid $green-color !important;
+        }
+        .ant-menu-submenu-title {
+            color: $green-color !important;
+        }
+    }
+    &.ant-menu-item-selected:after {
+        border-bottom: 2px solid $green-color !important;
+    }
+    &.ant-menu-item:hover:after {
+        border-bottom: 2px solid $green-color !important;
+    }
+    &.ant-menu-item-selected {
+        span a{
+            color: $green-color !important;
+        }
+    }
+    &.ant-menu-item:hover {
+        .ant-menu-item-icon {
+            color: $green-color !important;
+        }
+    }
+}
+
+
 
