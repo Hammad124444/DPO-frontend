@@ -2,7 +2,7 @@ import React from 'react';
 // Original Ant Style import
 import 'antd/dist/antd.min.css';
 // Custom Style Import
-import '../../styles/globals.css';
+import '../../styles/globals.scss';
 import '../../styles/custom.scss';
 import '../../styles/layout.scss';
 import '../../styles/spacing.scss';
