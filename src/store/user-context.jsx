@@ -1,33 +1,32 @@
 import {createContext, useEffect, useState} from "react";
-import {useRouter} from "next/router";
-
 
 const UserContext = createContext({
-    user: null,
+    userInfo: null,
     logIn: () => {},
     logOut: () => {}
 })
 
 export function UserContextProvider(props) {
-    const [userInfo, setUserInfo] = useState();
-    const router = useRouter();
+    const [userInfo, setUserInfo] = useState(null);
+
     useEffect(() => {
         const userData = localStorage.getItem('userInfo');
+        console.log(userData);
         if(userData) {
-            signInHandler(userData);
-        } else {
-            signOutHandler();
+            console.log('hererere');
+            setUserInfo(userData);
         }
-    }, userInfo)
+    }, [])
 
     const signInHandler = (userData) => {
+        console.log(userData);
+        localStorage.setItem('userInfo', userData);
         setUserInfo(userData);
     }
 
     const signOutHandler = () => {
-        router.push('/').then(() => {
-            setUserInfo(null);
-        });
+        localStorage.removeItem('userInfo');
+        setUserInfo(null);
     }
 
     const context = {
@@ -42,3 +41,5 @@ export function UserContextProvider(props) {
         </UserContext.Provider>
     )
 }
+
+export default UserContext;

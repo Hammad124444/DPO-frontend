@@ -7,10 +7,10 @@ export default function MLandingOptionCard({info}) {
 
     return (
         <Card
-            className="pt-30 mr-20"
+            className="pt-30 mr-20 option"
             cover={info.icon}
             actions={[
-                <MPrimaryBtn size="large" ghost type="danger" label={info.button} />
+                <MPrimaryBtn size="large" type="primary" label={info.button} />
             ]}
         >
             <Meta

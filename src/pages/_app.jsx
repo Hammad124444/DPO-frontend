@@ -11,6 +11,7 @@ import '../../styles/global/colors.scss';
 // Root layout on the app
 import MLayOutRoot from '../layout/layout-root';
 import {NotificationContextProvider} from "../store/notification-context";
+import {UserContextProvider} from "../store/user-context";
 
 
 export default function MyApp({ Component, pageProps }) {
@@ -18,11 +19,13 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
             <MLayOutRoot>
-                <NotificationContextProvider>
-                  {
-                    getLayout(<Component {...pageProps} />)
-                  }
-                </NotificationContextProvider>
+                <UserContextProvider>
+                    <NotificationContextProvider>
+                      {
+                        getLayout(<Component {...pageProps} />)
+                      }
+                    </NotificationContextProvider>
+                </UserContextProvider>
             </MLayOutRoot>
   )
 }

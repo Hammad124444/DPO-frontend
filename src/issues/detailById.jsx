@@ -6,11 +6,12 @@ import MIssueDetailCard from "../core/ui-kit/card/detailissuecard";
 
 
 export default function MIssueDetailById({issueId}) {
-    const issueDetail = detailedIssueInfo[issueId];
+
+    const issueDetail = detailedIssueInfo.find((el) => el.id === issueId);
 
     return(
-        <div className="container pt-30 ant-row">
-            <div className="ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-8 ant-col-xl-8">
+        <div className="container pt-50 ant-row pb-50">
+            <div className="d-flex align-items-center ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-8 ant-col-xl-8">
                 <MIssueDetailCard background={issueDetail.background} alt={issueDetail.title}/>
             </div>
             <div className="ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-16 ant-col-xl-16 ph-30">

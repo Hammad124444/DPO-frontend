@@ -5,6 +5,18 @@
     .ant-card-actions {
         background-color: transparent !important;
     }
+    &.option  {
+        .ant-card-meta-title {
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .ant-card-meta-description {
+            font-size: 16px;
+        }
+        .ant-card-options{
+            background-color: black !important;
+        }
+    }
 }
 // tabs customization
 
