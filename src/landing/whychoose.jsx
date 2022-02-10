@@ -13,7 +13,7 @@ export default function MLandingWhyChoose({detail}) {
             <div className="ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-xl-12 pt-20">
                 {
                     detail.paragraphs.map((el) => (
-                        <div key={el.id}>
+                        <div key={el.key}>
                             <p className="font-20 c-green font-bold">{el.title}</p>
                             <p className="font-16">{el.description}</p>
                         </div>

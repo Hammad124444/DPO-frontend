@@ -27,8 +27,8 @@ export default function MEditIssueDetailById({issueId}) {
                         type={'card'}
                     >
                         {
-                            existingIssueItems.map((el, index) => (
-                                    <TabPane tab={el.title} key={index + 1}>
+                            existingIssueItems.map((el) => (
+                                    <TabPane tab={el.title} key={el.key}>
                                         <div className={'container'}>
                                             <Form {...formLayout}>
                                             {el.contentGenerator({ issueId})}

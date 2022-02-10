@@ -70,9 +70,12 @@ $aligns: start, center, end;
 .f-right {
   float: right !important;
 }
+$textpositions: left, center, right;
 
-.text-center {
-  text-align: center !important;
+@each $textposition in $textpositions {
+  .text-#{$textposition} {
+    text-align: #{$textposition} !important;
+  }
 }
 
 .vh-100 {

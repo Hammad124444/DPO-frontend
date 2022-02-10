@@ -9,7 +9,7 @@ export default function MLandscape() {
 
 
     return(
-        <div className={styles.landscape + " vw-100 vh-100 d-flex flex-column align-items-center justify-content-center pb-50"}>
+        <div className={styles.landscape + " vh-100 d-flex flex-column align-items-center justify-content-center pb-50"}>
             <Card className={styles.mcard + ""}
                 actions={
                     landscapeInfo.btns.map((el) => (
