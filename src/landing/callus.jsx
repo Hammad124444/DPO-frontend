@@ -1,5 +1,5 @@
 import MPrimaryBtn from "../core/ui-kit/buttons/primaryBtn";
-import {PhoneFilled} from "@ant-design/icons";
+import { PhoneFilled } from "@ant-design/icons";
 
 export default function MLandingCallUs() {
     return(
