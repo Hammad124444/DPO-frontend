@@ -1,4 +1,4 @@
-import MIssueOverView from "../../issues/overview";
+import MIssueOverView from "../../issues/allissues";
 import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
 
 export default function MIssuesAll() {
