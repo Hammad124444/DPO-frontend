@@ -11,16 +11,15 @@ export function UserContextProvider(props) {
 
     useEffect(() => {
         const userData = localStorage.getItem('userInfo');
-        console.log(userData);
         if(userData) {
             console.log('hererere');
-            setUserInfo(userData);
+            setUserInfo(JSON.parse(userData));
         }
     }, [])
 
     const signInHandler = (userData) => {
         console.log(userData);
-        localStorage.setItem('userInfo', userData);
+        localStorage.setItem('userInfo', JSON.stringify(userData));
         setUserInfo(userData);
     }
 
