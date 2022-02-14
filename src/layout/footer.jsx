@@ -11,16 +11,16 @@ export default function MFooter() {
         <Footer className={'bg-white pv-40'} style={{boxShadow: '0px -2px 5px #d1d1d1'}}>
             <div className={'container ant-row'}>
                 <div className={'ant-col-xs-24 ant-col-sm-24 ant-col-md-8 ant-col-lg-8 ant-col-xl-8'}>
-                    <Image src="/assets/images/dpo-logo-footer.png" alt={'Footer Logo'} width={250} height={150}/>
+                    <Image src="/assets/images/dpo-logo-footer.png" alt={'Footer Logo'} width={220} height={120}/>
 
                     <Link href={'tel:' + contactinfo.mobile} >
-                        <a className={'d-flex align-items-center font-20 pt-10'}>
+                        <a className={'d-flex align-items-center font-18 pt-10'}>
                             <PhoneFilled className={'c-green font-28 mr-10'}/>
                             {contactinfo.mobile}
                         </a>
                     </Link>
                     <Link href={'mailto:' + contactinfo.email}>
-                        <a className={'d-flex font-20 align-items-center pt-10'}>
+                        <a className={'d-flex font-18 align-items-center pt-10'}>
                             <MailFilled className={'c-green font-28 mr-10'}/>
                             {contactinfo.email}
                         </a>
@@ -31,7 +31,7 @@ export default function MFooter() {
                     {
                         footerOptions.list.children.map((el, index) => (
                             <Link href={el.url} key={'listing' + index}>
-                                <a className={'font-20'}>{el.label}</a>
+                                <a className={'font-18 pt-10'}>{el.label}</a>
                             </Link>
                         ))
                     }
@@ -41,7 +41,7 @@ export default function MFooter() {
                     {
                         footerOptions.information.children.map((el, index) => (
                             <Link href={el.url} key={'information' + index}>
-                                <a className={'font-20'}>{el.label}</a>
+                                <a className={'font-18 pt-10'}>{el.label}</a>
                             </Link>
                         ))
                     }
@@ -50,11 +50,11 @@ export default function MFooter() {
             <Divider />
             <p className={'text-center font-14'}>© 2022 Direct Private Offers All Rights Reserved.
                 <Link href={'/information/termsandconditions'}>
-                    <a>Terms of Use</a>
+                    <a className={'font-bold'}> Terms of Use </a>
                 </Link>
-                 |
+                  |
                 <Link href={'/information/termsandconditions'}>
-                    <a>Privacy Policy</a>
+                    <a className={'font-bold'}> Privacy Policy</a>
                 </Link>
             </p>
         </Footer>

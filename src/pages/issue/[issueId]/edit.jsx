@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import MEditIssueDetailById from "../../../issues/editableIssue";
+import MEditIssueDetailById from "../../../issues/issueEdit";
 import MLayoutWithHeaderAndFooter from "../../../layout/layout-headerAndFooter";
 
 export default function MIssueEditById(props) {

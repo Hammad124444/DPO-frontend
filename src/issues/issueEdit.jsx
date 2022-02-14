@@ -1,4 +1,4 @@
-import { Tabs, Form } from 'antd';
+import { Tabs, Form, Row, Col } from 'antd';
 import { useState } from "react";
 import MButtonWithIcon from "../core/ui-kit/buttons/iconButton";
 import { SaveOutlined } from "@ant-design/icons";
@@ -13,11 +13,11 @@ export default function MEditIssueDetailById({issueId}) {
         // setCurrent()
     }
     return(
-        <div className={'container ant-row'}>
-            <div className={'ant-col-xs-24 ant-col-sm-12 ant-col-md-8 ant-col-lg-6 ant-col-xl-6'}>
+        <Row className={'container'}>
+            <Col xs={24} sm={12} md={8} lg={6} xl={6}>
 
-            </div>
-            <div className={'ant-col-xs-24 ant-col-sm-12 ant-col-md-16 ant-col-lg-18 ant-col-xl-18'}>
+            </Col>
+            <Col xs={24} sm={12} md={16} lg={18} xl={18}>
                 <div className={'pt-40 pl-30 card-container'}>
                     <Tabs
                         defaultActiveKey={current}
@@ -27,8 +27,8 @@ export default function MEditIssueDetailById({issueId}) {
                         type={'card'}
                     >
                         {
-                            existingIssueItems.map((el, index) => (
-                                    <TabPane tab={el.title} key={index + 1}>
+                            existingIssueItems.map((el) => (
+                                    <TabPane tab={el.title} key={el.key}>
                                         <div className={'container'}>
                                             <Form {...formLayout}>
                                             {el.contentGenerator({ issueId})}
@@ -42,7 +42,7 @@ export default function MEditIssueDetailById({issueId}) {
                         }
                     </Tabs>
                 </div>
-            </div>
-        </div>
+            </Col>
+        </Row>
     )
 }

@@ -2,15 +2,16 @@ import React from 'react';
 // Original Ant Style import
 import 'antd/dist/antd.min.css';
 // Custom Style Import
-import '../../styles/globals.css';
-import '../../styles/custom.scss';
-import '../../styles/layout.scss';
-import '../../styles/spacing.scss';
-import '../../styles/font.scss';
-import '../../styles/colors.scss';
+import '../../styles/global/globals.scss';
+import '../../styles/global/custom.scss';
+import '../../styles/global/layout.scss';
+import '../../styles/global/spacing.scss';
+import '../../styles/global/font.scss';
+import '../../styles/global/colors.scss';
 // Root layout on the app
 import MLayOutRoot from '../layout/layout-root';
 import {NotificationContextProvider} from "../store/notification-context";
+import {UserContextProvider} from "../store/user-context";
 
 
 export default function MyApp({ Component, pageProps }) {
@@ -18,11 +19,13 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
             <MLayOutRoot>
-                <NotificationContextProvider>
-                  {
-                    getLayout(<Component {...pageProps} />)
-                  }
-                </NotificationContextProvider>
+                <UserContextProvider>
+                    <NotificationContextProvider>
+                      {
+                        getLayout(<Component {...pageProps} />)
+                      }
+                    </NotificationContextProvider>
+                </UserContextProvider>
             </MLayOutRoot>
   )
 }

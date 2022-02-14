@@ -2,6 +2,7 @@ import { tempIssues } from "../core/data/examples/issues_temp";
 import MIssueCard from "../core/ui-kit/card/issuecard";
 
 export default function MIssueOverView() {
+
     return(
         <div className="container ant-row pt-30">
             {

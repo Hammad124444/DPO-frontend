@@ -1,17 +1,42 @@
-export const menus = [
-    {
-        key: '1',
-        name: 'Home',
-        url: '/'
-    },
-    {
-        key: '2',
-        name: 'About',
-        url: '/information/about'
-    },
-    {
-        key: '3',
-        name: 'Contact',
-        url: '/information/contact'
-    }
-]
+import {LoginOutlined, UsergroupAddOutlined} from "@ant-design/icons";
+
+export const menus = {
+    mainMenus: [
+        {
+            key: 'navhome',
+            name: 'Home',
+            url: '/'
+        },
+        {
+            key: 'navabout',
+            name: 'About',
+            url: '/information/about'
+        },
+        {
+            key: 'navcontact',
+            name: 'Contact',
+            url: '/information/contact'
+        },
+        {
+            key: 'navissues',
+            name: 'Issues',
+            url: '/issue'
+        }
+    ],
+    subMenus: [
+        {
+            key: 'navsignin',
+            name: 'Sign In',
+            url: '/auth/signin',
+            icon: <LoginOutlined />,
+            type: true
+        },
+        {
+            key: 'navregister',
+            name: 'Register',
+            url: '/auth/register',
+            icon: <UsergroupAddOutlined />,
+            type: true
+        }
+    ]
+}

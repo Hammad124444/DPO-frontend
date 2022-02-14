@@ -20,7 +20,7 @@ export default function MIssueCreate() {
                 <Steps direction="vertical" current={state} onChange={stepChange}>
                     {
                         newIsuseSteps.map((el) => (
-                            <Step key={el.title} title={el.title} description={el.description}/>
+                            <Step key={el.key} title={el.title} description={el.description}/>
                         ))
                     }
                 </Steps>
