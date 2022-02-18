@@ -1,8 +1,9 @@
 import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
+import MCPrivacyPolicy from "../../staticInfo/privacypolicy";
 
 export default function MPrivacyPolicy() {
     return(
-        <h1>Privacy Policy</h1>
+        <MCPrivacyPolicy />        
     )
 }
 

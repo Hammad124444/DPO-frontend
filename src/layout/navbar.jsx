@@ -30,7 +30,7 @@ export default function MNavbar () {
                     <a className={'d-flex align-items-center ' + styles.logoarea} >
                         <Image alt="logo"
                                src="/assets/icons/directprivateoffers-logo-bd.png"
-                               width={300} height={54}
+                               width={300} height={44}
                         />
                     </a>
                 </Link>

@@ -5,7 +5,9 @@ const { Title, Paragraph } = Typography;
 export default function MKNTypography({ title, contents, color, htmlType, titleLevel, contentFont }) {
     return(
         <Typography>
-            <Title className={'font-'+ titleLevel+ ' ' +color} >{ title }</Title>
+            {
+                title && <Title className={'font-'+ titleLevel+ ' ' +color} >{ title }</Title>
+            }
             {
                  contents && contents.map((el, index) => (
                      htmlType ? (

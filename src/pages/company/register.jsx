@@ -1,8 +1,9 @@
+import MCRegisterCompany from "../../company/register";
 import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
 
 export default function MPRegisterCompany() {
     return(
-        <h1>Register Company</h1>
+        <MCRegisterCompany />
     )
 }
 
