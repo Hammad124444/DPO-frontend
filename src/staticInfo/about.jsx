@@ -6,9 +6,6 @@ import { useRouter } from "next/router";
 import { Divider } from "antd";
 import MKAboutItem from "../core/ui-kit/card/aboutItem";
 
-
-
-
 export default function MSAbout() {
     
     const router = useRouter();
@@ -28,7 +25,7 @@ export default function MSAbout() {
                     />
                 </div>
                 <div className="ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-12 ant-col-xl-12 ph-20 pt-30">
-                    <MKNTypography title={aboutInfo.title} content={aboutInfo.content}/>
+                    <MKNTypography title={aboutInfo.title} contents={aboutInfo.content} contentFont={18}/>
                 </div>
             </div>
             <Divider dashed />

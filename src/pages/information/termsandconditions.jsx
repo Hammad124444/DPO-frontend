@@ -1,8 +1,9 @@
 import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
+import MPTermsOfUse from "../../staticInfo/termsOfUse";
 
 export default function MTermsAndConditions() {
     return(
-        <h1>Terms And Conditions</h1>
+        <MPTermsOfUse />
     )
 }
 

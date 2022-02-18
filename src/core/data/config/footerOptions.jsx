@@ -29,7 +29,7 @@ export const footerOptions = {
             },
             {
                 label: 'Terms & Conditions',
-                url: '/information/termsandconditons'
+                url: '/information/termsandconditions'
             }
         ]
     }
