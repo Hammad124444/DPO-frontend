@@ -13,7 +13,7 @@ export default function MKNTypography({ title, contents, color, htmlType, titleL
                              <div dangerouslySetInnerHTML={{ __html: el }} />
                          </Paragraph>
                          ):(
-                         <Paragraph className={'font-'+  contentFont + ' ' + color}>{ el }</Paragraph>
+                         <Paragraph key={index} className={'font-'+  contentFont + ' ' + color}>{ el }</Paragraph>
                      )
                  ))
             }
