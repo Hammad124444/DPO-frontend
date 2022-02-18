@@ -1,7 +1,6 @@
 import { Layout } from 'antd';
 const { Content } = Layout;
 import  MNavbar  from './navbar';
-import  MSider  from '../landing/sidebar';
 import MFooter from "./footer";
 
 export default function MLayoutLanding({children}) {
