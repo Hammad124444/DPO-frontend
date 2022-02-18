@@ -1,47 +1,67 @@
+import {useEffect, useState} from "react";
 import { Layout, Menu } from 'antd';
-import { menus }  from '../core/data/menu';
-import Link from 'next/link';
 import { UserOutlined, LoginOutlined, UsergroupAddOutlined } from '@ant-design/icons/lib/icons';
-
+import Link from 'next/link';
+import Image from 'next/image';
+import { menus }  from '../core/data/layoutItems/menu';
 const { Header } = Layout;
 const { SubMenu } = Menu;
+import styles from '../../styles/local/navbar.module.scss';
+import {useRouter} from "next/router";
 
 export default function MNavbar () {
+    const router = useRouter();
+    const [currentMenu, setCurrentMenu] = useState();
+    useEffect(()=> {
+        const path = router.pathname;
+        if (path == '') {
+
+        }
+    }, [])
+    const handleMenuClick = (e) => {
+        console.log(e);
+        setCurrentMenu(e.key);
+    }
+
     return (
-        <Header className='header no-padding bg-white'>
-            <div className="ant-row">
-                <div className="text-center ant-col-6 ant-col-sm-24 ant-col-md-6 ant-col-xl-5 ant-col-xxl-4">
-                    <Link href={"/"}>
-                        <a id="logo">
-                            <img alt="logo" src="/assets/icons/dpo-logo-header.png" />
-                        </a>
-                    </Link>
-                </div>
-                <div className="ant-col-18 menu-row ant-col-sm-0 ant-col-md-18 ant-col-xl-19 ant-col-xxl-20">
-                    <Menu mode="horizontal" theme="light" className="justify-content-end">
+        <Header className='p-sticky top-0 no-padding z-10 bg-white'>
+            <div className="ant-row d-flex ph-30">
+                <Link href={"/"}>
+                    <a className={'d-flex align-items-center ' + styles.logoarea} >
+                        <Image alt="logo"
+                               src="/assets/icons/directprivateoffers-logo-bd.png"
+                               width={300} height={54}
+                        />
+                    </a>
+                </Link>
+                <Menu selectedKeys={currentMenu}
+                      onClick={handleMenuClick}
+                      mode="horizontal"
+                      className={'d-block text-right ' + styles.menubar}
+                >
+                    {
+                        menus.mainMenus.map((element) => (
+                                <Menu.Item key={element.key}>
+                                    <Link href={element.url}>
+                                        {element.name}
+                                    </Link>
+                                </Menu.Item>
+                            )
+                        )
+                    }
+                    <SubMenu key='subMenu' icon={<UserOutlined />} title={'Account'}>
                         {
-                            menus.map((el) => (
-                                <Menu.Item key={ el.key }>{ el.name }</Menu.Item>
-                            ))
+                            menus.subMenus.map((el) => (
+                                    <Menu.Item key={el.key} icon={el.icon}>
+                                        <Link href={el.url}>
+                                            {el.name}
+                                        </Link>
+                                    </Menu.Item>
+                                )
+                            )
                         }
-                        <SubMenu key="SubMenu" icon={<UserOutlined />}>
-                            <Menu.Item key="setting:1" icon={<LoginOutlined />}>
-                                <Link href={"/auth/signin"}>
-                                    <a>
-                                        Sign In
-                                    </a>
-                                </Link>
-                            </Menu.Item>
-                            <Menu.Item key="setting:2" icon={<UsergroupAddOutlined />}>
-                                <Link href={"/auth/register"}>
-                                    <a>
-                                        Sign In
-                                    </a>
-                                </Link>
-                            </Menu.Item>
-                        </SubMenu>
-                    </Menu>
-                </div>
+                    </SubMenu>
+                </Menu>
             </div>
         </Header>        
     );

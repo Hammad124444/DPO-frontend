@@ -6,9 +6,9 @@ const { Content } = Layout;
 
 export default function MLayoutWithHeaderAndFooter({ children }) {
     return(
-        <Layout>
+        <Layout style={{ minHeight: '100vh' }}>
             <MNavbar />
-            <Content>
+            <Content className="bg-white">
                 { children }
             </Content>
             <MFooter />

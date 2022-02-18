@@ -1,7 +1,9 @@
 import { Button } from 'antd';
 
-export default function MPrimaryBtn({label, size, type}) {
+export default function MPrimaryBtn({label, size, type, action, ghost}) {
     return(
-        <Button type={type}  size={size}>{ label }</Button>
+        <Button type={type}  size={size}
+            onClick={action} ghost={ghost}
+        >{ label }</Button>
     );
 }

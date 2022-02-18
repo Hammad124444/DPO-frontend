@@ -1,53 +1,60 @@
-import { Form, Steps } from 'antd';
-// constants
-import {fundraiseTypes} from "../core/data/fundraiseTypes";
-import {stableCoins} from "../core/data/stableCoins";
-import {formLayout, rangePickerConfig} from "../core/data/ui-config";
-// components
-import MPrimaryBtn from "../core/ui-kit/buttons/primaryBtn";
-import MRangeDatePicker from "../core/ui-kit/datepicker/rangedatepicker";
-import MCheckBoxGroup from "../core/ui-kit/inputs/checkboxgroup";
-import MTextArea from "../core/ui-kit/inputs/textarea";
-import MEditInput from "../core/ui-kit/inputs/editInput";
+import {Form, Steps } from 'antd';
+import {useState} from "react";
+import { newIsuseSteps } from "../core/data/issue/newissueitems";
+import {formLayout} from "../core/data/config/ui-config";
+import MButtonWithIcon from "../core/ui-kit/buttons/iconButton";
+import {SwapLeftOutlined, SwapRightOutlined, SaveOutlined} from "@ant-design/icons";
 
 
+const { Step } = Steps;
 export default function MIssueCreate() {
+    const [state, setState] = useState(0);
+    const stepChange = (current) => {
+        console.log(current);
+        setState(current)
+    }
+
     return(
-        <Form {...formLayout}>
-            <Form.Item label="Issue Name">
-                <MEditInput  placeholder="Issue Name"/>
-            </Form.Item>
-            <Form.Item label="Description">
-                <MTextArea placeholder="Description about the issue"/>
-            </Form.Item>
-            <Form.Item label="Active Period" {...rangePickerConfig}>
-                <MRangeDatePicker type="new"/>
-            </Form.Item>
-            <Form.Item  label="Rate per Tier">
-                <MEditInput prefix="$" placeholder="Rate Per Tier"/>
-            </Form.Item>
-            <Form.Item label="Total ST per Tier">
-                <MEditInput placeholder="Total ST per Tier"/>
-            </Form.Item>
-            <Form.Item label="Non-accredited Limit USD">
-                <MEditInput prefix="$" />
-            </Form.Item>
-            <Form.Item label="Minimum investment USD">
-                <MEditInput prefix="$" />
-            </Form.Item>
-            <Form.Item label="Fund-raise Types">
-                <MCheckBoxGroup options={fundraiseTypes}/>
-            </Form.Item>
-            <Form.Item  label="Stable Coins">
-                <MCheckBoxGroup options={stableCoins}/>
-            </Form.Item>
-            <Form.Item label="Fund wallet">
-                <MEditInput placeholder="Fund Wallet Address"/>
-            </Form.Item>
-            <Form.Item label="Treasury wallet">
-                <MEditInput placeholder="Treasury Wallet Address"/>
-            </Form.Item>
-            <MPrimaryBtn label="Create Issue" size="large" type="primary"/>
-        </Form>
+        <div className={'container ant-row pt-30'}>
+            <div className={'ant-col-sm-12 ant-col-md-8 ant-col-lg-6 ant-col-xl-6'}>
+                <Steps direction="vertical" current={state} onChange={stepChange}>
+                    {
+                        newIsuseSteps.map((el) => (
+                            <Step key={el.key} title={el.title} description={el.description}/>
+                        ))
+                    }
+                </Steps>
+            </div>
+            <div className={'ant-col-sm-12 ant-col-md-16 ant-col-lg-18 ant-col-xl-18 d-flex flex-column justify-content-center align-items-center'}>
+                <Form {...formLayout}>
+                    {
+                        newIsuseSteps[state].content
+                    }
+                    <div className={'d-block text-center mt-50'}>
+                        {
+                            state > 0 && (
+                                <MButtonWithIcon label={'Previous'} action={() => setState(state - 1)} className={'mr-30'}
+                                    type={'primary'} size={'large'} icon={<SwapLeftOutlined />}
+                                />
+                            )
+                        }
+                        {
+                            state < newIsuseSteps.length - 1 && (
+                                <MButtonWithIcon label={'Next'} action={() => setState(state + 1)}
+                                                 type={'primary'} size={'large'} icon={<SwapRightOutlined />}
+                                />
+                            )
+                        }
+                        {
+                            state == newIsuseSteps.length - 1 && (
+                                <MButtonWithIcon label={'Submit'}
+                                    type={'danger'} size={'large'} icon={<SaveOutlined />}
+                                />
+                            )
+                        }
+                    </div>
+                </Form>
+            </div>
+        </div>
     )
 }

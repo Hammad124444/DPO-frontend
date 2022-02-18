@@ -1,10 +1,7 @@
-import {useRouter} from "next/router";
-import MLayoutIssues from "../../layout/layout-issues";
-import MIssueOverView from "../../issues/overview";
+import MIssueOverView from "../../issues/allissues";
+import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
 
 export default function MIssuesAll() {
-    const router = useRouter();
-    console.log(router.query);
     return(
         <MIssueOverView />
     )
@@ -12,6 +9,6 @@ export default function MIssuesAll() {
 
 MIssuesAll.getLayout = function getLayout(page) {
     return (
-        <MLayoutIssues>{ page }</MLayoutIssues>
+        <MLayoutWithHeaderAndFooter>{ page }</MLayoutWithHeaderAndFooter>
     )
 }
