@@ -1,6 +1,5 @@
 import MIssueCreate from "../../issues/newIssue";
-import MLayoutIssues from "../../layout/layout-issues";
-
+import MLayoutWithHeaderAndFooter from '../../layout/layout-headerAndFooter'
 
 export default function MNewIssue() {
     return(
@@ -8,11 +7,10 @@ export default function MNewIssue() {
     )
 }
 
-
 MNewIssue.getLayout = function getLayout(page) {
     return(
-        <MLayoutIssues>
+        <MLayoutWithHeaderAndFooter>
             {page}
-        </MLayoutIssues>
+        </MLayoutWithHeaderAndFooter>
     )
 }
