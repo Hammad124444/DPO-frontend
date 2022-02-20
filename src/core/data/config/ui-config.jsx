@@ -3,7 +3,6 @@ export const rangePickerConfig = {
 }
 
 export const formLayout = {
-    // Need to add offset property for form layout
     labelCol: {
         xs: {span: 24},
         sm: {span: 8 }

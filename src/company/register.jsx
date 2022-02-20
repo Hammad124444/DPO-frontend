@@ -1,5 +1,7 @@
 export default function MCRegisterCompany() {
     return(
-        <h1>Register Company Component</h1>
+        <div className="container">
+            <h1>Register Company Page</h1>
+        </div>
     )
 }

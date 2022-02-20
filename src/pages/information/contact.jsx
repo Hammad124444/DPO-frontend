@@ -1,14 +1,17 @@
-import MSContact from "../../staticInfo/contact";
-import MLayoutLanding from "../../layout/layout-landing";
+import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
+import MCContact from "../../staticInfo/contactus";
 
-export default function Contact() {
+export default function MPContactUs() {
     return(
-        <MSContact />
+        <MCContact />
     )
 }
 
-Contact.getLayout = function getLayout(page) {
-    return (
-        <MLayoutLanding>{page}</MLayoutLanding>
+MPContactUs.getLayout = function getLayout(page) {
+    return(
+        <MLayoutWithHeaderAndFooter>
+            { page }
+        </MLayoutWithHeaderAndFooter>
     )
 }
+
