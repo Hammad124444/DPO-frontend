@@ -1,4 +1,3 @@
-
 import MLandingOptions from "./options";
 import MLandingWhyChoose from "./whychoose";
 import MLandingCallUs from "./callus";
@@ -13,15 +12,15 @@ import { useEffect, useState } from "react";
 
 
 export default function MLandingContent() {
-    const [drawerVisible, setDrawerVisible] = useState();
-    useEffect(() => {
-        const checkStatus = localStorage.getItem('acknowledged');
-        setDrawerVisible(!checkStatus);
-    }, [])
-
-    const onAcknowledgeClick = () => {
-        localStorage.setItem('acknowledged', true);
-    } 
+    // const [drawerVisible, setDrawerVisible] = useState();
+    // useEffect(() => {
+    //     const checkStatus = localStorage.getItem('acknowledged');
+    //     setDrawerVisible(!checkStatus);
+    // }, [])
+    //
+    // const onAcknowledgeClick = () => {
+    //     localStorage.setItem('acknowledged', true);
+    // }
 
     return(
         <div className="container-fluid no-padding">
@@ -31,7 +30,7 @@ export default function MLandingContent() {
             <MLandingWhyChoose detail={WhyChooseUs}/>
             <Divider />
             <MLandingCallUs />
-            <MKDrawer visible={drawerVisible} action={onAcknowledgeClick} {...AcknowledgeData}/>
+            {/*<MKDrawer visible={drawerVisible} action={onAcknowledgeClick} {...AcknowledgeData}/>*/}
         </div>
     )
 }

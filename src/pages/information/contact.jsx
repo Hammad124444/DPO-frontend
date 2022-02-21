@@ -3,7 +3,8 @@ import MCContact from "../../staticInfo/contactus";
 
 export default function MPContactUs() {
     return(
-        <MCContact />
+        // <MCContact />
+        <h1>Hello Contact Us Page</h1>
     )
 }
 
