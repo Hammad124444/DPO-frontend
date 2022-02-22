@@ -1,9 +1,9 @@
 import { Tabs, Form, Row, Col } from 'antd';
 import { useState } from "react";
-import MButtonWithIcon from "../core/ui-kit/buttons/iconButton";
+import MButtonWithIcon from "../../core/ui-kit/buttons/iconButton";
 import { SaveOutlined } from "@ant-design/icons";
-import {existingIssueItems} from "../core/data/issue/existingissueitems";
-import {formLayout} from "../core/data/config/ui-config";
+import {existingIssueItems} from "../../core/data/issue/existingissueitems";
+import {formLayout} from "../../core/data/config/ui-config";
 
 const { TabPane } = Tabs;
 

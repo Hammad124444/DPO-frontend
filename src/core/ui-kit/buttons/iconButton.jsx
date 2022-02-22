@@ -1,17 +1,22 @@
+import {memo} from "react";
 import { Button } from 'antd';
 
 
-export default function MButtonWithIcon({label, size, type, action, icon, ghost, className}) {
+const MButtonWithIcon = (props) => {
     return(
         <>
             <Button
-                type={type}
-                size={size}
-                icon={icon}
-                onClick={action}
-                ghost={ghost}
-                className={className}
-            >{ label }</Button>
+                type={props.type}
+                size={props.size}
+                icon={props.icon}
+                onClick={props.action}
+                ghost={props.ghost}
+                className={props.className}
+                htmlType={props.htmlType}
+                disabled={props.disabled}
+            >{ props.label }</Button>
         </>
     )
 }
+
+export default memo(MButtonWithIcon);

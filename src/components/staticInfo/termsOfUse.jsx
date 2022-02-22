@@ -1,5 +1,5 @@
-import { termsOfUse } from "../core/data/config/termsOfUse";
-import MKNTypography from "../core/ui-kit/typography/nTypography";
+import { termsOfUse } from "../../core/data/config/termsOfUse";
+import MKNTypography from "../../core/ui-kit/typography/nTypography";
 
 export default function MPTermsOfUse() {
     return(

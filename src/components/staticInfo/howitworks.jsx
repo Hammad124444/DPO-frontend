@@ -1,6 +1,6 @@
 import {Card, Divider } from "antd";
-import MButtonWithIcon from "../core/ui-kit/buttons/iconButton";
-import { descriptions, actions } from "../core/data/static/howitworks";
+import MButtonWithIcon from "../../core/ui-kit/buttons/iconButton";
+import { descriptions, actions } from "../../core/data/static/howitworks";
 import {useRouter} from "next/router";
 const { Meta } = Card;
 

@@ -1,7 +1,7 @@
 import {Form} from "antd";
-import MCheckBoxGroup from "../../core/ui-kit/inputs/checkboxgroup";
-import {fundraiseTypes} from "../../core/data/config/fundraiseTypes";
-import {stableCoins} from "../../core/data/config/stableCoins";
+import MCheckBoxGroup from "../../../core/ui-kit/inputs/checkboxgroup";
+import {fundraiseTypes} from "../../../core/data/config/fundraiseTypes";
+import {stableCoins} from "../../../core/data/config/stableCoins";
 import {useState} from "react";
 
 export default function MNewIssueFundRaise() {

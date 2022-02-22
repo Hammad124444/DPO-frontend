@@ -1,5 +1,5 @@
 import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
-import MSListing from "../../staticInfo/listing";
+import MSListing from "../../components/staticInfo/listing";
 
 export default function MListing(props) {
     return(

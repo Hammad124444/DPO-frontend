@@ -1,6 +1,6 @@
 import { Form } from 'antd';
-import MSwitch from "../../core/ui-kit/Switch/switch";
-import MEditInput from "../../core/ui-kit/inputs/editInput";
+import MSwitch from "../../../core/ui-kit/Switch/switch";
+import MEditInput from "../../../core/ui-kit/inputs/editInput";
 
 export default function MIssueStatus({issueId}) {
     console.log(issueId);

@@ -1,6 +1,6 @@
 import {Form, Upload} from "antd";
-import MEditInput from "../../core/ui-kit/inputs/editInput";
-import MTextArea from "../../core/ui-kit/inputs/textarea";
+import MEditInput from "../../../core/ui-kit/inputs/editInput";
+import MTextArea from "../../../core/ui-kit/inputs/textarea";
 import ImgCrop from "antd-img-crop";
 import {useState} from "react";
 

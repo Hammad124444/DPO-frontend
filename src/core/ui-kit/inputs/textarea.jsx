@@ -1,7 +1,8 @@
-import { Mentions } from 'antd';
- 
+import { Input } from 'antd';
+
+const { TextArea } = Input;
 export default function MTextArea({placeholder}) {
     return(
-            <Mentions autoSize row={4} placeholder={placeholder}></Mentions>
+        <TextArea rows={4} placeholder={placeholder} />
     )
 }

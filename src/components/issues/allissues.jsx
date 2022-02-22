@@ -1,5 +1,5 @@
-import { tempIssues } from "../core/data/examples/issues_temp";
-import MIssueCard from "../core/ui-kit/card/issuecard";
+import { tempIssues } from "../../core/data/examples/issues_temp";
+import MIssueCard from "../../core/ui-kit/card/issuecard";
 
 export default function MIssueOverView() {
 

@@ -2,12 +2,12 @@ import MLandingOptions from "./options";
 import MLandingWhyChoose from "./whychoose";
 import MLandingCallUs from "./callus";
 
-import {LandingCards} from "../core/data/landing/landingcards";
-import {WhyChooseUs} from "../core/data/landing/chooseus";
+import {LandingCards} from "../../core/data/landing/landingcards";
+import {WhyChooseUs} from "../../core/data/landing/chooseus";
 import { Divider} from "antd";
 import MLandscape from "./landscape";
-import MKDrawer from "../core/ui-kit/drawer/drawer";
-import {AcknowledgeData} from '../core/data/config/Acknowledge';
+import MKDrawer from "../../core/ui-kit/drawer/drawer";
+import {AcknowledgeData} from '../../core/data/config/acknowledge';
 import { useEffect, useState } from "react";
 
 

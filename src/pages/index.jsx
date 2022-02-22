@@ -1,5 +1,5 @@
 import MLayoutLanding  from '../layout/layout-landing';
-import MLandingContent from "../landing/content";
+import MLandingContent from "../components/landing/content";
 
 export default function Home() {
   return (

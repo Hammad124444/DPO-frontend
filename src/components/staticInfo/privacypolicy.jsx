@@ -1,5 +1,5 @@
-import { privacyData } from "../core/data/config/privacypolicy";
-import MKNTypography from "../core/ui-kit/typography/nTypography";
+import { privacyData } from "../../core/data/config/privacypolicy";
+import MKNTypography from "../../core/ui-kit/typography/nTypography";
 
 export default function MCPrivacyPolicy() {
     return(

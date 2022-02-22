@@ -1,8 +1,8 @@
 import { Col, Form, Row, Steps } from 'antd';
 import {useState} from "react";
-import { newIssueSteps } from "../core/data/issue/newissueitems";
-import {formLayout} from "../core/data/config/ui-config";
-import MButtonWithIcon from "../core/ui-kit/buttons/iconButton";
+import { newIssueSteps } from "../../core/data/issue/newissueitems";
+import {formLayout} from "../../core/data/config/ui-config";
+import MButtonWithIcon from "../../core/ui-kit/buttons/iconButton";
 import {SwapLeftOutlined, SwapRightOutlined, SaveOutlined} from "@ant-design/icons";
 
 

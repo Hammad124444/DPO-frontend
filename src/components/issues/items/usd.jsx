@@ -1,6 +1,6 @@
-import {formLayout} from "../../core/data/config/ui-config";
+import {formLayout} from "../../../core/data/config/ui-config";
 import {Form} from "antd";
-import MEditInput from "../../core/ui-kit/inputs/editInput";
+import MEditInput from "../../../core/ui-kit/inputs/editInput";
 
 export default function MNewIssueUsd() {
     return(

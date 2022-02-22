@@ -1,4 +1,4 @@
-import MLandingOptionCard from "../core/ui-kit/card/landing_card";
+import MLandingOptionCard from "../../core/ui-kit/card/landing_card";
 
 export default function MLandingOptions({cards}) {
     return(

@@ -1,4 +1,4 @@
-import {listing} from "../core/data/static/listing";
+import {listing} from "../../core/data/static/listing";
 
 export default function MSListing({ listId }) {
     const pageInfo = listing[listId];

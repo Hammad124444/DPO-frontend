@@ -1,4 +1,4 @@
-import MCRegisterCompany from "../../company/register";
+import MCRegisterCompany from "../../components/company/register";
 import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
 
 export default function MPRegisterCompany() {

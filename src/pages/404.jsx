@@ -1,4 +1,4 @@
-import MPageNotFound from "../Errors/404";
+import MPageNotFound from "../components/Errors/404";
 
 export default function NotFoundPage() {
     return(

@@ -1,6 +1,6 @@
 import styles from './landscape.module.css';
 import { Card, Button} from "antd";
-import {landscapeInfo} from "../core/data/landing/landscape";
+import {landscapeInfo} from "../../core/data/landing/landscape";
 import {useRouter} from "next/router";
 
 

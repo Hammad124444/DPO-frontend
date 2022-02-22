@@ -1,8 +1,8 @@
 import { Descriptions } from "antd";
-import { detailedIssueInfo } from "../core/data/examples/issues_detailed";
-import MRangeDatePicker from "../core/ui-kit/datepicker/rangedatepicker";
-import MTag from "../core/ui-kit/tags/tag";
-import MIssueDetailCard from "../core/ui-kit/card/detailissuecard";
+import { detailedIssueInfo } from "../../core/data/examples/issues_detailed";
+import MRangeDatePicker from "../../core/ui-kit/datepicker/rangedatepicker";
+import MTag from "../../core/ui-kit/tags/tag";
+import MIssueDetailCard from "../../core/ui-kit/card/detailissuecard";
 
 
 export default function MIssueDetailById({issueId}) {

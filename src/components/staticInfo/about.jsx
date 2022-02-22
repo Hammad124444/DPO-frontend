@@ -1,10 +1,10 @@
 import Image from "next/image";
-import MKNTypography from "../core/ui-kit/typography/nTypography";
-import { aboutInfo, mission, vision, approach } from "../core/data/static/aboutInfo";
-import MPrimaryBtn from "../core/ui-kit/buttons/primaryBtn";
+import MKNTypography from "../../core/ui-kit/typography/nTypography";
+import { aboutInfo, mission, vision, approach } from "../../core/data/static/aboutInfo";
+import MPrimaryBtn from "../../core/ui-kit/buttons/primaryBtn";
 import { useRouter } from "next/router";
 import { Divider } from "antd";
-import MKAboutItem from "../core/ui-kit/card/aboutItem";
+import MKAboutItem from "../../core/ui-kit/card/aboutItem";
 
 export default function MSAbout() {
     

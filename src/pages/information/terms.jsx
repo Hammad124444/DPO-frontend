@@ -1,5 +1,5 @@
 import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
-import MPTermsOfUse from "../../staticInfo/termsOfUse";
+import MPTermsOfUse from "../../components/staticInfo/termsOfUse";
 
 export default function MTermsAndConditions() {
     return(

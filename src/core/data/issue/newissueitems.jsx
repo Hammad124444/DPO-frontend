@@ -1,8 +1,8 @@
-import MNewIssueMeta from "../../../issues/items/meta";
-import MNewIssuePeriod from "../../../issues/items/period";
-import MNewIssueTier from "../../../issues/items/tier";
-import MNewIssueFundRaise from "../../../issues/items/fundraise";
-import MNewIssueWallet from "../../../issues/items/wallet";
+import MNewIssueMeta from "../../../components/issues/items/meta";
+import MNewIssuePeriod from "../../../components/issues/items/period";
+import MNewIssueTier from "../../../components/issues/items/tier";
+import MNewIssueFundRaise from "../../../components/issues/items/fundraise";
+import MNewIssueWallet from "../../../components/issues/items/wallet";
 
 export const newIssueSteps = [
     {
