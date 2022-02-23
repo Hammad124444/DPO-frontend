@@ -1,11 +1,12 @@
 import Image from 'next/image';
-
+import {Col, Row, Typography} from "antd";
+const { Title } = Typography;
 export default function MLandingWhyChoose({detail}) {
     return(
-        <div className="ant-row container pt-30">
-            <h1 className="d-block font-36 m-auto font-bold">{detail.title}</h1>
-            <h3 className="d-block font-28 m-auto pt-10">{detail.subTitle}</h3>
-            <div className="ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-xl-12 pt-40">
+        <Row className="container pt-30">
+            <Title className="d-block m-auto">{detail.title}</Title>
+            <Title level={3} className="d-block m-auto pt-10">{detail.subTitle}</Title>
+            <Col xs={24} sm={24} md={24} lg={12} xl={12} className="pt-40">
                 {
                     detail.paragraphs.map((el) => (
                         <div key={el.key}>
@@ -14,15 +15,15 @@ export default function MLandingWhyChoose({detail}) {
                         </div>
                     ))
                 }
-            </div>
-            <div className="pl-20 ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-xl-12 pt-40">
+            </Col>
+            <Col xs={24} sm={24} md={24} lg={12} xl={12} className="pl-20 pt-40">
                 <Image  alt="Why Choose Us"
                     src={detail.img} layout="responsive"
-                        width={30}
-                        height={30}
+                    width={300}
+                    height={250}
                 />
-            </div>
-        </div>
+            </Col>
+        </Row>
 
     )
 }

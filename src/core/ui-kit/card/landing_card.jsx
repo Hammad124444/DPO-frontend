@@ -3,20 +3,20 @@ import MPrimaryBtn from "../buttons/primaryBtn";
 
 const { Meta } = Card;
 
-export default function MLandingOptionCard({info}) {
+export default function MLandingOptionCard(props) {
 
     return (
         <Card
             className="pt-30 mr-20 option"
-            cover={info.icon}
+            cover={ props.icon }
             actions={[
-                <MPrimaryBtn size="large" type="primary" label={info.button} />
+                <MPrimaryBtn key={'actionKey'} size="large" type="primary" label={ props.button } />
             ]}
         >
             <Meta
                 className="text-center"
-                title={info.title}
-                description={info.description}
+                title={ props.title }
+                description={ props.description }
             />
         </Card>
     )

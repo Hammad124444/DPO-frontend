@@ -75,7 +75,8 @@ export default function MCContact() {
                             label={'Message'}
                             rules={[
                                 {
-                                    required: true
+                                    // TODO: Need to fix textarea validation
+                                    // required: true
                                 }
                             ]}
                         >
@@ -91,6 +92,7 @@ export default function MCContact() {
                                 icon={<SendOutlined />} disabled={disabled}
                             />
                         </Form.Item>
+                        <MKRecaptcha action={() => console.log('asdfasdf')}/>
                     </Form>
                 </Col>
             </Row>

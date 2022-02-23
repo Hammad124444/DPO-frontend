@@ -1,7 +1,6 @@
 import { Col, Form, Row, Steps } from 'antd';
 import {useState} from "react";
 import { newIssueSteps } from "../../core/data/issue/newissueitems";
-import {formLayout} from "../../core/data/config/ui-config";
 import MButtonWithIcon from "../../core/ui-kit/buttons/iconButton";
 import {SwapLeftOutlined, SwapRightOutlined, SaveOutlined} from "@ant-design/icons";
 
@@ -26,7 +25,7 @@ export default function MIssueCreate() {
                 </Steps>
             </Col>
             <Col xs={12} sm={12} md={16} lg={18} xl={18} className={'d-flex flex-column justify-content-center align-items-center'}>
-                <Form {...formLayout}>
+                <Form layout={'vertical'}>
                     {
                         newIssueSteps[step].content
                     }

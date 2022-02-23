@@ -1,20 +1,19 @@
-import { Descriptions } from "antd";
+import { Row, Col, Descriptions } from "antd";
 import { detailedIssueInfo } from "../../core/data/examples/issues_detailed";
 import MRangeDatePicker from "../../core/ui-kit/datepicker/rangedatepicker";
 import MTag from "../../core/ui-kit/tags/tag";
 import MIssueDetailCard from "../../core/ui-kit/card/detailissuecard";
-
 
 export default function MIssueDetailById({issueId}) {
 
     const issueDetail = detailedIssueInfo.find((el) => el.id === issueId);
 
     return(
-        <div className="container pt-50 ant-row pb-50">
-            <div className="d-flex align-items-center ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-8 ant-col-xl-8">
+        <Row className="container pt-50 pb-50">
+            <Col xs={24} sm={24} md={12} lg={8} xl={8} className="d-flex align-items-center">
                 <MIssueDetailCard background={issueDetail.background} alt={issueDetail.title}/>
-            </div>
-            <div className="ant-col-xs-24 ant-col-sm-24 ant-col-md-12 ant-col-lg-16 ant-col-xl-16 ph-30">
+            </Col>
+            <Col xs={24} sm={24} md={12} lg={16} xl={16} className="ph-30">
                 <Descriptions title={issueDetail.title} className="d-flex flex-column" bordered
                     column={1}
                 >
@@ -39,34 +38,28 @@ export default function MIssueDetailById({issueId}) {
                     </Descriptions.Item>
                     <Descriptions.Item label="Fund Raised">
                         {
-                            issueDetail.fundraised.fiat.usd ? (
+                            issueDetail.fundraised.fiat.usd &&
                                 <MTag color="orange" label={'$' + issueDetail.fundraised.fiat.usd  + '(US)'}/>
-                            ): (<></>)
                         }
                         {
-                            issueDetail.fundraised.fiat.cad ? (
+                            issueDetail.fundraised.fiat.cad &&
                                 <MTag color="purple" label={'$' + issueDetail.fundraised.fiat.cad  + '(CA)'}/>
-                            ): (<></>)
                         }
                         {
-                            issueDetail.fundraised.crypto.ether ? (
+                            issueDetail.fundraised.crypto.ether &&
                                 <MTag color="magenta" label={issueDetail.fundraised.crypto.ether  + ' Ether'}/>
-                            ): (<></>)
                         }
                         {
-                            issueDetail.fundraised.crypto.dai ? (
+                            issueDetail.fundraised.crypto.dai &&
                                 <MTag color="geekblue" label={issueDetail.fundraised.crypto.dai  + ' DAI'}/>
-                            ): (<></>)
                         }
                         {
-                            issueDetail.fundraised.crypto.usdt ? (
+                            issueDetail.fundraised.crypto.usdt &&
                                 <MTag color="red" label={issueDetail.fundraised.crypto.usdt  + ' USDT'}/>
-                            ): (<></>)
                         }
                         {
-                            issueDetail.fundraised.crypto.usdc ? (
+                            issueDetail.fundraised.crypto.usdc &&
                                 <MTag color="cyan" label={issueDetail.fundraised.crypto.ether  + 'USDC'}/>
-                            ): (<></>)
                         }
                     </Descriptions.Item>
                     <Descriptions.Item label="Number of Investors">
@@ -79,7 +72,7 @@ export default function MIssueDetailById({issueId}) {
                         { issueDetail.balanceUnlocked }
                     </Descriptions.Item>
                 </Descriptions>
-            </div>
-        </div>
+            </Col>
+        </Row>
     )
 }

@@ -1,15 +1,16 @@
+import { Row, Col } from 'antd';
 import MLandingOptionCard from "../../core/ui-kit/card/landing_card";
 
 export default function MLandingOptions({cards}) {
     return(
-        <div className="ant-row container pt-30">
+        <Row className="container pt-30">
             {
                 cards.map((el) => (
-                    <div key={el.key} className="ant-col-8 ant-col-sm-8 ant-col-xs-24">
-                        <MLandingOptionCard info={el}/>
-                    </div>
+                    <Col key={el.key} xs={24} sm={24} md={8} lg={8} xl={8} className={'mt-30'}>
+                        <MLandingOptionCard {...el}/>
+                    </Col>
                 ))
             }
-        </div>
+        </Row>
     )
 }
