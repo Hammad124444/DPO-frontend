@@ -1,13 +1,13 @@
-import MCRegisterCompany from "../../components/company/register";
 import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
+import MCPrivacyPolicy from "../../components/staticInfo/privacypolicy";
 
-export default function MPRegisterCompany() {
+export default function MPrivacyPolicy() {
     return(
-        <MCRegisterCompany />
+        <MCPrivacyPolicy />        
     )
 }
 
-MPRegisterCompany.getLayout = function getLayout(page) {
+MPrivacyPolicy.getLayout = function getLayout(page) {
     return(
         <MLayoutWithHeaderAndFooter>
             {page}

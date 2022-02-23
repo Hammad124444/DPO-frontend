@@ -1,4 +1,4 @@
-import MIssueCreate from "../../issues/newIssue";
+import MIssueCreate from "../../components/issues/newIssue";
 import MLayoutWithHeaderAndFooter from '../../layout/layout-headerAndFooter'
 
 export default function MNewIssue() {

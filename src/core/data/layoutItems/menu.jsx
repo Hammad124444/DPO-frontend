@@ -1,4 +1,4 @@
-import {LoginOutlined, UsergroupAddOutlined} from "@ant-design/icons";
+import { LoginOutlined, UsergroupAddOutlined } from "@ant-design/icons";
 
 export const menus = {
     mainMenus: [

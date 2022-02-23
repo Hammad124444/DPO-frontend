@@ -1,6 +1,6 @@
 import MLayoutLanding from "../../layout/layout-landing";
-import MSAbout from "../../staticInfo/about";
-import MLandingCallUs from "../../landing/callus";
+import MSAbout from "../../components/staticInfo/about";
+import MLandingCallUs from "../../components/landing/callus";
 
 export default function About() {
     return(
