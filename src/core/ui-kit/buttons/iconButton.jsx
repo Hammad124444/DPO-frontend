@@ -1,6 +1,4 @@
-import {memo} from "react";
 import { Button } from 'antd';
-
 
 const MButtonWithIcon = (props) => {
     return(
@@ -19,4 +17,4 @@ const MButtonWithIcon = (props) => {
     )
 }
 
-export default memo(MButtonWithIcon);
+export default MButtonWithIcon;

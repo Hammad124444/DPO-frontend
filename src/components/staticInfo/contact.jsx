@@ -1,28 +1,58 @@
-import {Form, Row, Col, Input, Select} from 'antd';
+import {useState} from "react";
+import {Form, Row, Col, Input, Select, Card, Typography} from 'antd';
+import {SendOutlined} from "@ant-design/icons";
+//Static Data
+import { agreeItems } from "../../core/data/config/contactinfo";
+import {DTRegisterTypes} from "../../core/data/config/registerType";
+//Ui Kits
 import MTextArea from "../../core/ui-kit/inputs/textarea";
 import MKCheckBox from "../../core/ui-kit/inputs/checkbox";
-import { agreeItems } from "../../core/data/config/contactinfo";
 import MKRecaptcha from "../../core/ui-kit/recaptcha/recaptcha";
 import MButtonWithIcon from "../../core/ui-kit/buttons/iconButton";
-import {SendOutlined} from "@ant-design/icons";
+//Service
 import {
     validateMessages,
     onAgreeChange,
     onFinish
 } from "../../services/staticInfo/contact";
-import {useState} from "react";
+import {useRouter} from "next/router";
 
 const { Option } = Select;
+const { Meta } = Card;
+const { Title } = Typography;
 
 export default function MCContact() {
     const [disabled, setDisabled] = useState(true);
+    const router = useRouter();
     return(
         <>
-            <Row className='container pt-50'>
-                <Col xs={24} sm={24} md={8} lg={8} xl={8}>
-
+            <Row className='container pt-50 pb-30'>
+                <Col xs={24} sm={24} md={12} lg={9} xl={7}
+                     className={'pr-40 d-flex flex-column justify-content-space-around'}
+                >
+                    {
+                        DTRegisterTypes.map((el) => (
+                            <Card
+                                key={el.id}
+                                className={'mb-20'}
+                                actions={[
+                                    <MButtonWithIcon key={'custom'} icon={<SendOutlined />}  type={'danger'} label={el.button.label}
+                                         action={() => router.push(el.button.routerLink)}
+                                    />
+                                ]}
+                            >
+                                <Meta
+                                    className="text-center"
+                                    title={ <Title level={5}>{el.title}</Title> }
+                                    description={ el.process.map((el, index) => (
+                                        <p key={index} style={{color: 'black !important'}}>{index + 1}.{el}</p>
+                                    )) }
+                                />
+                            </Card>
+                        ))
+                    }
                 </Col>
-                <Col xs={24} sm={24} md={16} lg={16} xl={16} >
+                <Col xs={24} sm={24} md={12} lg={15} xl={17} >
                     <h1 className={'mt-30 c-green font-32 font-bold text-center'}>Contact Us</h1>
                     <Form name={"contactus-form"} onFinish={onFinish} validateMessages={validateMessages}
                           layout={'vertical'}
