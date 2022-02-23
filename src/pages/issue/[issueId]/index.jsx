@@ -1,5 +1,5 @@
 import MLayoutWithHeaderAndFooter from "../../../layout/layout-headerAndFooter";
-import MIssueDetailById from "../../../issues/issueItem";
+import MIssueDetailById from "../../../components/issues/issueItem";
 
 export default function MIssueById(props) {
     return(

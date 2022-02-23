@@ -1,13 +1,13 @@
-import MCRegisterCompany from "../../components/company/register";
 import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
+import MPTermsOfUse from "../../components/staticInfo/termsOfUse";
 
-export default function MPRegisterCompany() {
+export default function MTermsAndConditions() {
     return(
-        <MCRegisterCompany />
+        <MPTermsOfUse />
     )
 }
 
-MPRegisterCompany.getLayout = function getLayout(page) {
+MTermsAndConditions.getLayout = function getLayout(page) {
     return(
         <MLayoutWithHeaderAndFooter>
             {page}
