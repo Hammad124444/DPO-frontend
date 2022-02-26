@@ -3,7 +3,6 @@ import {useState} from "react";
 import { newIssueSteps } from "../../core/data/issue/newissueitems";
 import {SwapLeftOutlined, SwapRightOutlined, SaveOutlined} from "@ant-design/icons";
 import MPrimaryBtn from "../../core/ui-kit/buttons/primaryBtn";
-import {onFinish} from "../../services/staticInfo/contact";
 
 
 const { Step } = Steps;
@@ -33,6 +32,7 @@ export default function MIssueCreate() {
                  className={'d-flex flex-column justify-content-center align-items-center'}
             >
                 <Form
+                    key={'newIssueForm'}
                     layout={'vertical'}
                     name={'newIssue-form'}
                     onFinish={onFinish}
@@ -40,7 +40,7 @@ export default function MIssueCreate() {
                     {
                         newIssueSteps[step].content
                     }
-                    <div className={'d-block text-center mt-50'}>
+                    <div key={'btnArea'} className={'d-block text-center mt-50'}>
                         {
                             step > 0 && (
                                 <MPrimaryBtn
