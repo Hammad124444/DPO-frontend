@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
 import {Button, Card} from 'antd';
-import MButtonWithIcon from "../buttons/iconButton";
 import MTag from "../tags/tag";
 import Image from 'next/image';
 import {EditOutlined, EyeOutlined} from "@ant-design/icons";
 import UserContext from "../../../store/user-context";
 import {useContext, useState, useEffect} from "react";
+import MPrimaryBtn from "../buttons/primaryBtn";
 const { Meta } = Card;
 
 
@@ -37,8 +37,8 @@ export default function MIssueCard({info}) {
         }
     }, [userCtx]);
 
-    const viewDetailBtn = <MButtonWithIcon type="primary" size="large" label="See Details" action={() => navigateToDetailedIssue({url: info.id, type: 'view'})} children={<EyeOutlined />}/>
-    const editBtn = <MButtonWithIcon type="danger" size="large" label="Edit Issue" action={() => navigateToDetailedIssue({url: info.id+'/edit', type: 'edit' })} children={<EditOutlined />}/>
+    const viewDetailBtn = <MPrimaryBtn type="primary" size="large" label="See Details" action={() => navigateToDetailedIssue({url: info.id, type: 'view'})} children={<EyeOutlined />}/>
+    const editBtn = <MPrimaryBtn type="danger" size="large" label="Edit Issue" action={() => navigateToDetailedIssue({url: info.id+'/edit', type: 'edit' })} children={<EditOutlined />}/>
 
     let actions = [];
     if (!role || role == 'investor' ) {

@@ -18,7 +18,3 @@ export const formLayout = {
         xl: { span: 16 }
     }
 }
-
-export const formBtnLayout = {
-
-}

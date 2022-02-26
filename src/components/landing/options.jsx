@@ -1,15 +1,34 @@
-import MLandingOptionCard from "../../core/ui-kit/card/landing_card";
+import {Row, Col, Card} from 'antd';
+import MPrimaryBtn from "../../core/ui-kit/buttons/primaryBtn";
+import {useRouter} from "next/router";
 
 export default function MLandingOptions({cards}) {
+    const router = useRouter();
     return(
-        <div className="ant-row container pt-30">
+        <Row className="container pt-30">
             {
-                cards.map((el) => (
-                    <div key={el.key} className="ant-col-8 ant-col-sm-8 ant-col-xs-24">
-                        <MLandingOptionCard info={el}/>
-                    </div>
+                cards.map((el, index) => (
+                    <Col key={el.key} xs={24} sm={24} md={8} lg={8} xl={8} className={'mt-30'}>
+                        <Card
+                            key={'card' + index}
+                            className="pt-30 mr-20 option"
+                            cover={ el.icon }
+                            actions={[
+                                <MPrimaryBtn key={'actionKey'} size="large" type="primary" label={ el.button.label }
+                                    action={() => router.push(el.button.url)}
+                                />
+                            ]}
+                        >
+                            <Card.Meta
+                                key={'metaData'+ index}
+                                className="text-center"
+                                title={ el.title }
+                                description={ el.description }
+                            />
+                        </Card>
+                    </Col>
                 ))
             }
-        </div>
+        </Row>
     )
 }

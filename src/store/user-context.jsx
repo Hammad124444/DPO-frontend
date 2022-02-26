@@ -12,7 +12,6 @@ export function UserContextProvider(props) {
     useEffect(() => {
         const userData = localStorage.getItem('userInfo');
         if(userData) {
-            console.log('hererere');
             setUserInfo(JSON.parse(userData));
         }
     }, [])

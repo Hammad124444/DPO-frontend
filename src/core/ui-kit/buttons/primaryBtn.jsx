@@ -1,9 +1,16 @@
 import { Button } from 'antd';
 
-export default function MPrimaryBtn({label, size, type, action, ghost}) {
+export default function MPrimaryBtn(props) {
     return(
-        <Button type={type}  size={size}
-            onClick={action} ghost={ghost}
-        >{ label }</Button>
+        <Button
+            type={props.type}
+            size={props.size}
+            icon={props.icon}
+            onClick={props.action}
+            ghost={props.ghost}
+            className={props.className}
+            htmlType={props.htmlType}
+            disabled={props.disabled}
+        >{ props.label }</Button>
     );
 }

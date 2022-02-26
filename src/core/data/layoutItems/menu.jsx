@@ -34,7 +34,7 @@ export const menus = {
         {
             key: 'navregister',
             name: 'Register',
-            url: '/auth/register',
+            url: '/auth/signup',
             icon: <UsergroupAddOutlined />,
             type: true
         }

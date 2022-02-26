@@ -25,11 +25,11 @@ export const footerOptions = {
             },
             {
                 label: 'Privacy Policy',
-                url: '/information/privacypolicy'
+                url: '/information/privacy'
             },
             {
                 label: 'Terms & Conditions',
-                url: '/information/termsandconditions'
+                url: '/information/terms'
             }
         ]
     }

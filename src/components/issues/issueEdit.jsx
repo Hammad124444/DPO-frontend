@@ -1,9 +1,8 @@
 import { Tabs, Form, Row, Col } from 'antd';
 import { useState } from "react";
-import MButtonWithIcon from "../../core/ui-kit/buttons/iconButton";
 import { SaveOutlined } from "@ant-design/icons";
 import {existingIssueItems} from "../../core/data/issue/existingissueitems";
-import {formLayout} from "../../core/data/config/ui-config";
+import MPrimaryBtn from "../../core/ui-kit/buttons/primaryBtn";
 
 const { TabPane } = Tabs;
 
@@ -13,13 +12,11 @@ export default function MEditIssueDetailById({issueId}) {
         // setCurrent()
     }
     return(
-        <Row className={'container'}>
-            <Col xs={24} sm={12} md={8} lg={6} xl={6}>
-
-            </Col>
-            <Col xs={24} sm={12} md={16} lg={18} xl={18}>
-                <div className={'pt-40 pl-30 card-container'}>
+        <Row className={'container'} justify={'center'}>
+            <Col key={'editCol'} xs={24} sm={20} md={16} lg={12} xl={8}>
+                <div key={'tabsArea'} className={'pt-40 pl-30 card-container'}>
                     <Tabs
+                        key={'editTabs'}
                         defaultActiveKey={current}
                         tabPosition="top"
                         size="large"
@@ -29,13 +26,23 @@ export default function MEditIssueDetailById({issueId}) {
                         {
                             existingIssueItems.map((el) => (
                                     <TabPane tab={el.title} key={el.key}>
-                                        <div className={'container'}>
-                                            <Form {...formLayout}>
-                                            {el.contentGenerator({ issueId})}
+                                        <div key={'container'} className={'container'}>
+                                            <Form
+                                                key={'issueEditForm'}
+                                                layout={'vertical'}
+                                                name={'issueEdit-form'}
+                                            >
+                                                {el.contentGenerator({issueId})}
                                             </Form>
                                         </div>
-                                        <div className={'d-block text-center pt-40'}>
-                                            <MButtonWithIcon label={'Save Changes'} type={'primary'} size={'large'} icon={<SaveOutlined />}/>
+                                        <div key={'SaveChangeArea'} className={'d-block text-center pt-40'}>
+                                            <MPrimaryBtn
+                                                key={'saveBtn'}
+                                                label={'Save Changes'}
+                                                type={'primary'}
+                                                size={'large'}
+                                                icon={<SaveOutlined />}
+                                            />
                                         </div>
                                     </TabPane>
                             ))

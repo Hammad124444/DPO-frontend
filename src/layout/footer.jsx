@@ -1,4 +1,4 @@
-import { Col, Divider, Layout, Row } from 'antd';
+import { Row, Col, Divider, Layout } from 'antd';
 import Image from "next/image";
 import Link from "next/link";
 import { contactInfo } from "../core/data/config/contactinfo";
@@ -25,7 +25,7 @@ export default function MFooter() {
                         </a>
                     </Link>
                 </Col>
-                <div className={'ant-col-xs-24 ant-col-sm-24 ant-col-md-8 ant-col-lg-8 ant-col-xl-8 d-flex flex-column align-items-center'}>
+                <Col xs={24} sm={24} md={8} lg={8} xl={8} className={'d-flex flex-column align-items-center'}>
                     <h1 className={'font-24 font-bold c-green'}>{footerOptions.list.label}</h1>
                     {
                         footerOptions.list.children.map((el, index) => (
@@ -34,8 +34,8 @@ export default function MFooter() {
                             </Link>
                         ))
                     }
-                </div>
-                <div className={'ant-col-xs-24 ant-col-sm-24 ant-col-md-8 ant-col-lg-8 ant-col-xl-8 d-flex flex-column align-items-center'}>
+                </Col>
+                <Col xs={24} sm={24} md={8} lg={8} xl={8} className={'d-flex flex-column align-items-center'}>
                     <h1 className={'font-24 font-bold c-green'}>{footerOptions.information.label}</h1>
                     {
                         footerOptions.information.children.map((el, index) => (
@@ -44,7 +44,7 @@ export default function MFooter() {
                             </Link>
                         ))
                     }
-                </div>
+                </Col>
             </Row>
             <Divider />
             <p className={'text-center font-14'}>© 2022 Direct Private Offers All Rights Reserved.
