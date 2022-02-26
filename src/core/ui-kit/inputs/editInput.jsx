@@ -5,7 +5,6 @@ export default function MEditInput({prefix, placeholder}) {
             <Input
             style={{ width: '100%' }}
             placeholder={placeholder}
-            id="warning"
             prefix={prefix}
             size='large'
             />

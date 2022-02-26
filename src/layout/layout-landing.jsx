@@ -6,16 +6,15 @@ import MFooter from "./footer";
 export default function MLayoutLanding({children}) {
     return (
             <Layout style={{ minHeight: '100vh' }}>
-                <MNavbar />
-                <Layout>
-                    {/*<MSider />*/}
-                    <Layout>
-                        <Content className="bg-white">
+                <MNavbar key={'navbar'} />
+                <Layout key={'layout'}>
+                    <Layout key={'subLayout'}>
+                        <Content key={'landingContent'} className="bg-white">
                             { children }
                         </Content>
                     </Layout>
                 </Layout>
-                <MFooter />
+                <MFooter key={'staticFooter'} />
             </Layout>
     )
 }

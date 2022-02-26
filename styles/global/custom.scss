@@ -42,6 +42,10 @@
         background: transparent !important;
         color: $green-color !important;
     }
+    &[disabled] {
+        background: #f5f5f5 !important;
+        border-color: #d9d9d9 !important;
+    }
 }
 
 a:hover {

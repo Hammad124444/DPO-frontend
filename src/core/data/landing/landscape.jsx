@@ -5,7 +5,7 @@ export const landscapeInfo = {
         {
             type: 'danger',
             label: 'Get Started',
-            navigation: '/information/about'
+            navigation: '/company/register'
         },
         {
             type: 'primary',
