@@ -1,5 +1,5 @@
 import {Checkbox, Col, Form, Input, Row, Typography} from "antd";
-import {SendOutlined} from "@ant-design/icons";
+import {MailOutlined, SendOutlined} from "@ant-design/icons";
 import {agreeItems} from "../../../core/data/config/contactinfo";
 import {useState} from "react";
 import {useForm} from "antd/lib/form/Form";
@@ -65,8 +65,14 @@ export default function MCRegisterOnRole(props) {
                                 required: true
                             },
                         ]}
+                        hasFeedback
                     >
-                        <Input key={'userEmailInput'} size={'large'} placeholder={'Enter your email address'}/>
+                        <Input
+                            key={'userEmailInput'}
+                            size={'large'}
+                            placeholder={'Enter your email address'}
+                            prefix={<MailOutlined className="site-form-item-icon"/>}
+                        />
                     </Form.Item>
                     <Form.Item
                         key={'confirmEmail'}
@@ -87,7 +93,12 @@ export default function MCRegisterOnRole(props) {
                         ]}
                         hasFeedback
                     >
-                        <Input key={'confirmEmailInput'} size={'large'} placeholder={'Confirm your email address'}/>
+                        <Input
+                            key={'confirmEmailInput'}
+                            size={'large'}
+                            placeholder={'Confirm your email address'}
+                            prefix={<MailOutlined className="site-form-item-icon"/>}
+                        />
                     </Form.Item>
                     <Form.Item
                         key={'userPassword'}
