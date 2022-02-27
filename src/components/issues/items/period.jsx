@@ -6,7 +6,7 @@ export default function MNewIssuePeriod() {
     return(
         <>
             <Form.Item label="Active Period" {...rangePickerConfig}>
-                <MRangeDatePicker type="new"/>
+                <MRangeDatePicker key={'newRangePicker-issuePeriod'} type="new"/>
             </Form.Item>
         </>
     )

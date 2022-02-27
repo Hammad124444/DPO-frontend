@@ -7,17 +7,17 @@ export default function MIssueStatus({issueId}) {
     return(
         <>
             <Form.Item label={'Pause/Unpause STO'}>
-                <MSwitch on={'Paused'} off={'Unpaused'} type={'edit'}/>
+                <MSwitch key={'status-paused'} on={'Paused'} off={'Unpaused'} type={'edit'}/>
             </Form.Item>
             <Form.Item label={'Freeze/Unfreeze Transfers'}>
-                <MSwitch on={'Freeze'} off={'Unfreeze'} type={'edit'}/>
+                <MSwitch key={'status-freeze'} on={'Freeze'} off={'Unfreeze'} type={'edit'}/>
             </Form.Item>
             <Form.Item label={'Can Transfer'}>
-                <MEditInput placeholder={'Transfter From'} />
-                <MEditInput placeholder={'Transfter To'} />
+                <MEditInput key={'status-TransferInput'} placeholder={'Transfter From'} />
+                <MEditInput key={'status-TransferInput'} placeholder={'Transfter To'} />
             </Form.Item>
             <Form.Item label={'Transfer Ownership'}>
-                <MEditInput placeholder={'New Owner'} />
+                <MEditInput key={'status-newOwner'} placeholder={'New Owner'} />
             </Form.Item>
         </>
     )
