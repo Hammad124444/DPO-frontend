@@ -7,11 +7,11 @@ const { Content } = Layout;
 export default function MLayoutWithHeaderAndFooter({ children }) {
     return(
         <Layout style={{ minHeight: '100vh' }}>
-            <MNavbar />
-            <Content className="bg-white">
+            <MNavbar key={'navbar'} />
+            <Content key={'contentArea'} className="bg-white">
                 { children }
             </Content>
-            <MFooter />
+            <MFooter key={'footer'} />
         </Layout>
     )
 }

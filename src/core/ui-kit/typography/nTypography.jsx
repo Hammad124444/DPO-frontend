@@ -12,7 +12,7 @@ export default function MKNTypography({ title, contents, color, htmlType, titleL
                  contents && contents.map((el, index) => (
                      htmlType ? (
                          <Paragraph key={index} className={'font-'+  contentFont + ' ' + color}>
-                             <div dangerouslySetInnerHTML={{ __html: el }} />
+                             <div key={'des' + index} dangerouslySetInnerHTML={{ __html: el }} />
                          </Paragraph>
                          ):(
                          <Paragraph key={index} className={'font-'+  contentFont + ' ' + color}>{ el }</Paragraph>

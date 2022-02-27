@@ -1,11 +1,11 @@
 import { Input } from 'antd';
 
-export default function MEditInput({prefix, placeholder}) {
+export default function MEditInput({prefix,suffix, placeholder}) {
     return(
             <Input
-            style={{ width: '100%' }}
             placeholder={placeholder}
             prefix={prefix}
+            suffix={suffix}
             size='large'
             />
     )

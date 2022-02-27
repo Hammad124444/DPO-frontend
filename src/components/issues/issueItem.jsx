@@ -10,33 +10,33 @@ export default function MIssueDetailById({issueId}) {
 
     return(
         <Row className="container pt-50 pb-50">
-            <Col xs={24} sm={24} md={12} lg={8} xl={8} className="d-flex align-items-center">
-                <MIssueDetailCard background={issueDetail.background} alt={issueDetail.title}/>
+            <Col key={'detailCardCol'} xs={24} sm={24} md={12} lg={8} xl={8} className="d-flex align-items-center">
+                <MIssueDetailCard key={'detailCard'} background={issueDetail.background} alt={issueDetail.title}/>
             </Col>
-            <Col xs={24} sm={24} md={12} lg={16} xl={16} className="ph-30">
-                <Descriptions title={issueDetail.title} className="d-flex flex-column" bordered
+            <Col key={'descriptionCol'}  xs={24} sm={24} md={12} lg={16} xl={16} className="ph-30">
+                <Descriptions key={'description'} title={issueDetail.title} className="d-flex flex-column" bordered
                     column={1}
                 >
-                    <Descriptions.Item label="Description">{issueDetail.description}</Descriptions.Item>
-                    <Descriptions.Item label="Period">
-                        <MRangeDatePicker type="view" start_date={issueDetail.start_date} end_date={issueDetail.end_date}/>
+                    <Descriptions.Item key={'itemDescription'} label="Description">{issueDetail.description}</Descriptions.Item>
+                    <Descriptions.Item key={'item-period'} label="Period">
+                        <MRangeDatePicker key={'rangPicker'} type="view" start_date={issueDetail.start_date} end_date={issueDetail.end_date}/>
                     </Descriptions.Item>
-                    <Descriptions.Item label="Security Token Offering">
-                        <MTag label="open" color="blue"/>
+                    <Descriptions.Item key={'item-open'} label="Security Token Offering">
+                        <MTag key={'tagOpen'} label="open" color="blue"/>
                     </Descriptions.Item>
-                    <Descriptions.Item label="Security Token Offering">
-                        <MTag label="open" color="blue"/>
+                    <Descriptions.Item key={'item-open1'} label="Security Token Offering">
+                        <MTag key={'tagOpen1'} label="open" color="blue"/>
                     </Descriptions.Item>
-                    <Descriptions.Item label="Cap">
-                        <MTag label="open" color="blue" />
+                    <Descriptions.Item key={'itemCap'} label="Cap">
+                        <MTag key={'capOpen'} label="open" color="blue" />
                     </Descriptions.Item>
-                    <Descriptions.Item label="Tokens Minted">
+                    <Descriptions.Item key={'itemMint'} label="Tokens Minted">
                         { issueDetail.tminted }
                     </Descriptions.Item>
-                    <Descriptions.Item label="Tokens Sold">
+                    <Descriptions.Item key={'itemSold'} label="Tokens Sold">
                         { issueDetail.tsold }
                     </Descriptions.Item>
-                    <Descriptions.Item label="Fund Raised">
+                    <Descriptions.Item key={'itemRaised'} label="Fund Raised">
                         {
                             issueDetail.fundraised.fiat.usd &&
                                 <MTag color="orange" label={'$' + issueDetail.fundraised.fiat.usd  + '(US)'}/>
@@ -62,13 +62,13 @@ export default function MIssueDetailById({issueId}) {
                                 <MTag color="cyan" label={issueDetail.fundraised.crypto.ether  + 'USDC'}/>
                         }
                     </Descriptions.Item>
-                    <Descriptions.Item label="Number of Investors">
+                    <Descriptions.Item key={'itemInvestors'} label="Number of Investors">
                         { issueDetail.investors.length }
                     </Descriptions.Item>
-                    <Descriptions.Item label="Balance Locked">
+                    <Descriptions.Item key={'itemLocked'} label="Balance Locked">
                         { issueDetail.balanceLocked }
                     </Descriptions.Item>
-                    <Descriptions.Item label="Balance Unlocked">
+                    <Descriptions.Item key={'itemUnlocked'} label="Balance Unlocked">
                         { issueDetail.balanceUnlocked }
                     </Descriptions.Item>
                 </Descriptions>

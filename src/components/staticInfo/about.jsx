@@ -18,14 +18,14 @@ export default function MSAbout() {
     return(
         <>
             <Row className="container pt-30">
-                <Col xs={24} sm={24} md={12} lg={12} xl={12} className="d-flex flex-column justify-content-center">
-                    <Image src="/assets/images/about.jpg" alt="about" width={500} height={400}/>
-                    <MPrimaryBtn type="danger" label="How It Works" size="large"
+                <Col key={'imageCol'} xs={24} sm={24} md={12} lg={12} xl={12} className="d-flex flex-column justify-content-center">
+                    <Image key={'aboutUsImage'} src="/assets/images/about.jpg" alt="about" width={500} height={400}/>
+                    <MPrimaryBtn key={'howItWorksButton'} type="primary" label="How It Works" size="large"
                         action={() => navigateToHowItWorks() }
                     />
                 </Col>
-                <Col xs={24} sm={24} md={12} lg={12} xl={12} className="ph-20 pt-30">
-                    <MKNTypography title={aboutInfo.title} contents={aboutInfo.content} contentFont={18}/>
+                <Col key={'DescriptionCol'} xs={24} sm={24} md={12} lg={12} xl={12} className="ph-20 pt-30">
+                    <MKNTypography key={'typography'} title={aboutInfo.title} contents={aboutInfo.content} contentFont={18}/>
                 </Col>
             </Row>
             <Divider dashed />
