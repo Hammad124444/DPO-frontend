@@ -8,7 +8,11 @@ export default function MWentWrong() {
             status="500"
             title="500"
             subTitle="Sorry, something went wrong"
-            extra={<Link href="/"><a>Go Home</a></Link>}
+            extra={
+                <Link href="/">
+                    <a key={'backHomeHyper'}>Go Home</a>
+                </Link>
+            }
         />
     )
 }
