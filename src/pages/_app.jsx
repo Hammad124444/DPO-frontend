@@ -19,8 +19,8 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
             <MLayOutRoot>
-                <UserContextProvider>
-                    <NotificationContextProvider>
+                <UserContextProvider key={'userContextProvider'}>
+                    <NotificationContextProvider key={'notificationContextProvider'}>
                       {
                         getLayout(<Component {...pageProps} />)
                       }
