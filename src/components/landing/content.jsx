@@ -12,25 +12,25 @@ import { useEffect, useState } from "react";
 
 
 export default function MLandingContent() {
-    // const [drawerVisible, setDrawerVisible] = useState();
-    // useEffect(() => {
-    //     const checkStatus = localStorage.getItem('acknowledged');
-    //     setDrawerVisible(!checkStatus);
-    // }, [])
-    //
-    // const onAcknowledgeClick = () => {
-    //     localStorage.setItem('acknowledged', true);
-    // }
+    const [drawerVisible, setDrawerVisible] = useState(true);
+    useEffect(() => {
+        let checkStatus = localStorage.getItem('acknowledged');
+        setDrawerVisible(!checkStatus);
+    }, [])
+
+    const onAcknowledgeClick = () => {
+        localStorage.setItem('acknowledged', true);
+    }
 
     return(
         <div className="container-fluid no-padding">
-            <MLandscape />
-            <MLandingOptions cards={LandingCards}/>
-            <Divider />
-            <MLandingWhyChoose detail={WhyChooseUs}/>
-            <Divider />
-            <MLandingCallUs />
-            {/*<MKDrawer visible={drawerVisible} action={onAcknowledgeClick} {...AcknowledgeData}/>*/}
+            <MLandscape key={'landscape'}/>
+            <MLandingOptions key={'options'} cards={LandingCards}/>
+            <Divider key={'firstDivider'}/>
+            <MLandingWhyChoose key={'whyChooseUs'} detail={WhyChooseUs}/>
+            <Divider key={'secondDivider'}/>
+            <MLandingCallUs key={'callUs'}/>
+            <MKDrawer key={'drawer'} visible={drawerVisible} action={onAcknowledgeClick} {...AcknowledgeData}/>
         </div>
     )
 }

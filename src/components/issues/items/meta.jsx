@@ -1,6 +1,5 @@
-import {Form, Upload} from "antd";
+import {Form, Input, Upload} from "antd";
 import MEditInput from "../../../core/ui-kit/inputs/editInput";
-import MTextArea from "../../../core/ui-kit/inputs/textarea";
 import ImgCrop from "antd-img-crop";
 import {useState} from "react";
 
@@ -29,8 +28,9 @@ export default function MNewIssueMeta() {
     return(
         <>
             <Form.Item label={'Issue Avatar'}>
-                <ImgCrop rotate>
+                <ImgCrop key={'imgCrop'} rotate>
                     <Upload
+                        key={'imgUpload'}
                         action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
                         listType="picture-card"
                         fileList={fileList}
@@ -42,10 +42,10 @@ export default function MNewIssueMeta() {
                 </ImgCrop>
             </Form.Item>
             <Form.Item label="Issue Name">
-                <MEditInput  placeholder="Issue Name"/>
+                <MEditInput key={'editInput'} placeholder="Issue Name"/>
             </Form.Item>
             <Form.Item label="Description">
-                <MTextArea placeholder="Description about the issue"/>
+                <Input.TextArea key={'descritonTextArea'} showCount maxLength={500} rows={5} placeholder="Description about the issue"/>
             </Form.Item>
         </>
     )

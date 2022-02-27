@@ -1,4 +1,3 @@
-import {formLayout} from "../../../core/data/config/ui-config";
 import {Form} from "antd";
 import MEditInput from "../../../core/ui-kit/inputs/editInput";
 

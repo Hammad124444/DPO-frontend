@@ -1,13 +1,13 @@
 import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
 import MCPrivacyPolicy from "../../components/staticInfo/privacypolicy";
 
-export default function MPrivacyPolicy() {
+export default function MPPrivacyPolicy() {
     return(
         <MCPrivacyPolicy />        
     )
 }
 
-MPrivacyPolicy.getLayout = function getLayout(page) {
+MPPrivacyPolicy.getLayout = function getLayout(page) {
     return(
         <MLayoutWithHeaderAndFooter>
             {page}

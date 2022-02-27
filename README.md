@@ -15,7 +15,7 @@
 
 ### Technical Guideline
 * Used [Next.js](https://nextjs.org/), [Ant Design](https://ant.design/) for UI framework and decorating widgets.
-* This project is using [Yarn Cli](https://classic.yarnpkg.com/en/docs/cli/) and you can follow guide from their offical website.
+* This project is using [Yarn Cli](https://classic.yarnpkg.com/en/docs/cli/) and you can follow guide from their official website.
 * Used [Heroku](https://heroku.com) for staging server.
 * For the production server, everything is configured via DigitalOcean
 
