@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import MEditIssueDetailById from "../../../components/issues/issueEdit";
 import MLayoutWithHeaderAndFooter from "../../../layout/layout-headerAndFooter";
 

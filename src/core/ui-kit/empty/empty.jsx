@@ -1,7 +1,7 @@
 import { Empty, Button  } from 'antd';
 import MPrimaryBtn from "../buttons/primaryBtn";
 
-export default function MEmpty({ buttonlabel }) {
+export default function MEmpty({ buttonLabel }) {
     return(
         <Empty
             image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
@@ -9,8 +9,12 @@ export default function MEmpty({ buttonlabel }) {
                 height: 60,
             }}
         >
-            <Button type="primary">Create Now</Button>
-            <MPrimaryBtn type="default" label={buttonlabel}/>
+            <Button key={'createIssueButton'} type="primary">Create Now</Button>
+            <MPrimaryBtn
+                key={'customActionButton'}
+                type="default"
+                label={buttonLabel}
+            />
         </Empty>
     )
 }

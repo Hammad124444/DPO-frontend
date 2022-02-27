@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {Layout, Menu, Row} from 'antd';
-import { UserOutlined, LoginOutlined, UsergroupAddOutlined } from '@ant-design/icons/lib/icons';
+import { UserOutlined } from '@ant-design/icons/lib/icons';
 import Link from 'next/link';
 import Image from 'next/image';
 import { menus }  from '../core/data/layoutItems/menu';
@@ -11,13 +11,16 @@ import {useRouter} from "next/router";
 
 export default function MNavbar () {
     const router = useRouter();
+
     const [currentMenu, setCurrentMenu] = useState();
+
     useEffect(()=> {
         const path = router.pathname;
-        if (path == '') {
+        if (path === '') {
 
         }
     }, [])
+
     const handleMenuClick = (e) => {
         console.log(e);
         setCurrentMenu(e.key);

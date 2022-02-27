@@ -12,7 +12,7 @@ export default function MKDrawer(props) {
             {/* eslint-disable-next-line react/jsx-key */}
             <div className="container text-center">
                 {/* eslint-disable-next-line react/jsx-key */}
-                <Image src={props.logoUrl} layout="responsive"/>
+                <Image src={props.logoUrl} layout="responsive" alt={'drawer-Logo'}/>
                 {/* eslint-disable-next-line react/jsx-key */}
                 <p className='font-16'>{ props.description }</p>
                 {/* eslint-disable-next-line react/jsx-key */}

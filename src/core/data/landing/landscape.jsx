@@ -1,7 +1,7 @@
 export const landscapeInfo = {
     title: 'Connecting Investors',
     subtitle: 'To the World\'s fastest-growing ventures and best investments',
-    btns: [
+    buttons: [
         {
             type: 'danger',
             label: 'Get Started',

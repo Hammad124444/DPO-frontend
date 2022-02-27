@@ -1,5 +1,5 @@
 import {createContext, useEffect, useState} from "react";
-import {closeNotification, openNotification} from "../core/ui-kit/notification/notification";
+import {closeNotification, openNotification} from "../services/global/notification/notification";
 
 const NotificationContext = createContext({
     notification: null, // {title, message, status}

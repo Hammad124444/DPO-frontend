@@ -3,7 +3,7 @@ import { Upload } from 'antd';
 import ImgCrop from 'antd-img-crop';
 
 export default function MUploadImage() {
-    const [fileList, setFileList] = useState();
+    const [fileList, setFileList] = useState([]);
 
     const onPreview = async file => {
         let src = file.url;
@@ -26,6 +26,7 @@ export default function MUploadImage() {
     return(
         <ImgCrop rotate>
             <Upload
+                key={'uploadComponent'}
                 action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
                 listType="picture-card"
                 fileList={fileList}

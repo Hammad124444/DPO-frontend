@@ -3,20 +3,19 @@ import { Layout, Menu } from 'antd';
 import { CheckCircleOutlined, InfoCircleOutlined, QuestionCircleOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 
-const { Sider } = Layout;
 
-export default function MSider() {
+export default function MSideBar() {
     const [state, setState] = useState(true);
     const onCollapse = (collapsed) => {
         setState(collapsed);
       };
     return(
-        <Sider width={200} collapsible collapsed={state} onCollapse={ onCollapse }>
-            <Menu mode='inline'
+        <Layout.Sider width={200} collapsible collapsed={state} onCollapse={ onCollapse }>
+            <Menu key={'sideMenu'} mode='inline'
                 theme={"dark"}
             >
                 <Menu.Item key="active" icon={<CheckCircleOutlined />}>
-                    <Link href={"/issue"}>
+                    <Link key={'issuesLink'} href={"/issue"}>
                         Active Issues
                     </Link>
                 </Menu.Item>
@@ -27,6 +26,6 @@ export default function MSider() {
                     Upcoming Issues
                 </Menu.Item>
             </Menu>
-        </Sider>
+        </Layout.Sider>
     );
 }

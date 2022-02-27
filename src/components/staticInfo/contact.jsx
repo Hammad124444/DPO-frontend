@@ -4,16 +4,14 @@ import {SendOutlined} from "@ant-design/icons";
 //Static Data
 import { agreeItems } from "../../core/data/config/contactinfo";
 import {DTRegisterTypes} from "../../core/data/config/registerType";
-//Ui Kits
-import MKRecaptcha from "../../core/ui-kit/recaptcha/recaptcha";
-import MButtonWithIcon from "../../core/ui-kit/buttons/iconButton";
 //Service
 import {
     validateMessages,
     onAgreeChange,
     onFinish
-} from "../../services/staticInfo/contact";
+} from "../../services/local/staticInfo/contact";
 import {useRouter} from "next/router";
+import MPrimaryBtn from "../../core/ui-kit/buttons/primaryBtn";
 
 const { Option } = Select;
 const { Meta } = Card;
@@ -34,8 +32,12 @@ export default function MCContact() {
                                 key={el.id}
                                 className={'mb-20'}
                                 actions={[
-                                    <MButtonWithIcon key={'custom'} icon={<SendOutlined />}  type={'primary'} label={el.button.label}
-                                         action={() => router.push(el.button.routerLink)}
+                                    <MPrimaryBtn
+                                        key={'custom'}
+                                        icon={<SendOutlined />}
+                                        type={'primary'}
+                                        label={el.button.label}
+                                        action={() => router.push(el.button.routerLink)}
                                     />
                                 ]}
                             >
@@ -124,11 +126,16 @@ export default function MCContact() {
                             </Checkbox>
                         </Form.Item>
                         <Form.Item key={'submitBtn'} className={'text-center'} >
-                            <MButtonWithIcon key={'submit'} label={'Send Message'} type={'primary'} size={'large'} htmlType={'submit'}
-                                icon={<SendOutlined />} disabled={disabled}
+                            <MPrimaryBtn
+                                key={'submit'}
+                                label={'Send Message'}
+                                type={'primary'}
+                                size={'large'}
+                                htmlType={'submit'}
+                                icon={<SendOutlined />}
+                                disabled={disabled}
                             />
                         </Form.Item>
-                        <MKRecaptcha key={'gRecaptcha'} action={() => console.log('here')}/>
                     </Form>
                 </Col>
             </Row>

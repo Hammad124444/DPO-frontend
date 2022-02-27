@@ -1,6 +1,5 @@
 import { notification } from 'antd';
 
-
 export const openNotification = (props) => {
         notification.open({
             key: props.key,

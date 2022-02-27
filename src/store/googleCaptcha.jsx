@@ -1,11 +1,11 @@
 import {GoogleReCaptcha, GoogleReCaptchaProvider} from "react-google-recaptcha-v3";
 
-export default function MKRecaptcha({action}) {
+export default function MGoogleRecaptcha() {
     return(
         <GoogleReCaptchaProvider
             reCaptchaKey={process.env.reCaptchaKey}
         >
-            <GoogleReCaptcha onVerify={action} />
+            <GoogleReCaptcha key={'captcha'} onVerify={(token) => console.log(token)}/>
         </GoogleReCaptchaProvider>
     )
 }

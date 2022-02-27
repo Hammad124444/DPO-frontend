@@ -5,10 +5,10 @@ export default function MNewIssueUsd() {
     return(
         <>
             <Form.Item label="Non-accredited Limit USD">
-                <MEditInput prefix="$" />
+                <MEditInput key={'limitInput1'} prefix="$" />
             </Form.Item>
             <Form.Item label="Minimum investment USD">
-                <MEditInput prefix="$" />
+                <MEditInput key={'limitInput2'} prefix="$" />
             </Form.Item>
         </>
     )
