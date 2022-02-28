@@ -20,6 +20,7 @@ export default function MLandingContent() {
 
     const onAcknowledgeClick = () => {
         localStorage.setItem('acknowledged', true);
+        setDrawerVisible(false);
     }
 
     return(
