@@ -2,8 +2,8 @@ import {Checkbox, Col, Form, Input, Row, Typography} from "antd";
 import {useForm} from "antd/lib/form/Form";
 import {agreeItems} from "../../core/data/config/contactinfo";
 import {useState} from "react";
-import MButtonWithIcon from "../../core/ui-kit/buttons/iconButton";
 import {SendOutlined} from "@ant-design/icons";
+import MPrimaryBtn from "../../core/ui-kit/buttons/primaryBtn";
 
 export default function MCRegisterCompany() {
     const [disabled, setDisabled] = useState(true);
@@ -100,7 +100,7 @@ export default function MCRegisterCompany() {
                         >{agreeItems.storeInfo}</Checkbox>
                     </Form.Item>
                     <Form.Item key={'submitBtn'} className={'text-center'}>
-                        <MButtonWithIcon key={'submit'}
+                        <MPrimaryBtn key={'submit'}
                              icon={<SendOutlined />}
                              label={'Join Direct Private Offers'}
                              type={'primary'}
